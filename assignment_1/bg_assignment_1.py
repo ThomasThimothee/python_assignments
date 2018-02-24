@@ -9,13 +9,6 @@ filename_2 = "data2.xls"
 
 
 
-
-#   Question 3: Has the crime moved to from one area to another?
-#   Question 4: Is there a connection between type of crimes and locations?
-#   Question 5: Which year was the most crime and what crime occured most times?
-
-
-
 def doc_1(argument):
 #    webget.download(argument)
 #    filename_1 = '
@@ -59,11 +52,8 @@ def question_1():
 def question_2():
     wb = xlrd.open_workbook(filename_1)
     sheet = wb.sheet_by_index(0)
-    total_crime_1994 = 0
     crimes_category_1994 = []
-    total_crime_2004 = 0
     crimes_category_2004 = []
-    total_crime_2013 = 0
     crimes_category_2013 = []
     wb = xlrd.open_workbook(filename_1)
     sheet = wb.sheet_by_index(0)
@@ -80,13 +70,10 @@ def question_2():
    
 
     for column in range(2, 19, 2):
-            total_crime_1994 += sheet.cell_value(4, column)
             crimes_category_1994.append(sheet.cell_value(4, column))
     for column in range(2, 19, 2):
-            total_crime_2004 += sheet.cell_value(14, column)
             crimes_category_2004.append(sheet.cell_value(14, column))
     for column in range(2, 19, 2):
-            total_crime_2013 += sheet.cell_value(23, column)   
             crimes_category_2013.append(sheet.cell_value(23, column))
 
     plt.subplot(221)
@@ -105,15 +92,62 @@ def question_2():
     plt.show()
     
         
-
+#   Question 3: Has the crime moved to from one area to another?
 def question_3():
-    pass
+    wb = xlrd.open_workbook(filename_2)
+    sheet = wb.sheet_by_index(0)
+    
 
+#   Question 4: Is there a connection between type of crimes and locations?
 def question_4():
     pass
 
+
+#   Question 5: Which year was the most crime and what crime occured most times?
 def question_5():
-    pass
+    wb = xlrd.open_workbook(filename_1)
+    sheet = wb.sheet_by_index(0)
+    values = []
+    years = []
+    crimes_category_1994 = []
+    categories = []
+
+    for row in range(4,24):
+        count = 0
+        for column in range(2, 19, 2):
+            count += sheet.cell_value(row, column)
+        values.append(count)
+        year = str(int(sheet.cell_value(row, 0))) 
+        years.append(year)
+
+    max_value = max(values)
+    max_index = values.index(max_value)
+
+
+    for index, item in enumerate(years):
+        if  (item == 20013):
+            years[index] = 2001
+        if  (item == 20124):
+            years[index] = 2012
+
+    for column in range(2, 19, 2):
+        crimes_category_1994.append(sheet.cell_value(4, column))   
+
+    for column in range(2, 19, 2):
+        categories.append(sheet.cell_value(3, column))      
+    
+    plt.subplot(211)
+    plt.bar(years, values)
+    plt.axis([min(years), max(years), 0, max(values)])
+    plt.ylabel("Total number of crime", fontsize = 7)
+    plt.title("Crimes per year", fontsize = 12)
+
+    plt.subplot(212)
+    plt.bar(categories,crimes_category_1994)
+    plt.ylabel("Number of crime", fontsize = 7)
+    plt.title("Crimes per category in 1994", fontsize = 12)
+    
+    plt.show()
 
 
 
@@ -122,7 +156,7 @@ if __name__ == "__main__" :
 #    doc_1(sys.argv[1])
 #    doc_2(sys.argv[2])
 #    question_1()
-    question_2()
+#    question_2()
 #    question_3()
 #    question_4()
-#    question_5()
+    question_5()

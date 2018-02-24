@@ -96,6 +96,9 @@ def question_2():
     
         
 #   Question 3: Has the crime moved to from one area to another?
+# We cannot really asnwer this question since we have data for 2013 only
+# I collected total number of crime per state, I guess that if we had the data over 20 years we could
+# answer the question with a 3D histogram and see if one state recorded more crimes while others recorded less
 def question_3():
     wb = xlrd.open_workbook(filename_2)
     sheet = wb.sheet_by_index(0)
@@ -124,7 +127,7 @@ def question_3():
     plt.show()
 
 #   Question 4: Is there a connection between type of crimes and locations?
-# --> look at top 2 crime categories per state
+# --> look at top 3 crime categories per state, we can see that it is somewhat the same ones
 def question_4():
     results = {}
     state = "ALABAMA"

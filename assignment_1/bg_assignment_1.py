@@ -5,10 +5,14 @@ import matplotlib.pyplot as plt
 import pprint
 
 
-url_1 = "https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/1tabledatadecoverviewpdf/table_1_crime_in_the_united_states_by_volume_and_rate_per_100000_inhabitants_1994-2013.xls/output.xls"
-url_2 = "https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls"
 file_name_1 = "data1.xls"
 file_name_2 = "data2.xls"
+
+def download_doc1(argument):
+    webget.download(argument, file_name_1)
+
+def download_doc2(argument):
+    webget.download(argument, file_name_2)
 
 #   Question 1: Has the crime decreased or increased over the last 20 years?
 def question_1():
@@ -33,9 +37,9 @@ def question_1():
 
     plt.plot(years, values)
     plt.axis([min(years), max(years), 0, max(values)])
-    plt.title("Question 1: Evolution of total number of crime", fontsize = 24)
-    plt.xlabel("years", fontsize = 14)
-    plt.ylabel("Total number of crime", fontsize = 14)
+    plt.title("Question 1: Evolution of total number of crime", fontsize = 14)
+    plt.xlabel("years", fontsize = 12)
+    plt.ylabel("Total number of crime", fontsize = 12)
     plt.show()
 
 #   Question 2: Has the type of crime changed?
@@ -55,7 +59,7 @@ def question_2():
 
     #remove line jump from titles because it looks even worse on the chart
     for title in categories:
-        title = title.replace("\n","")
+        title = title.replace("\n"," ")
         final_categories.append(title)
    
 
@@ -68,19 +72,19 @@ def question_2():
 
     plt.subplot(221)
     plt.pie(crimes_category_1994, autopct='%1.1f%%')
-    plt.title("Crime per category 1994", fontsize = 24)
+    plt.title("Crime per category 1994", fontsize = 12)
 
     plt.subplot(222)
     plt.pie(crimes_category_2004, autopct='%1.1f%%')
-    plt.title("Crime per category 2004", fontsize = 24)
+    plt.title("Crime per category 2004", fontsize = 12)
 
     plt.subplot(223)
     plt.pie(crimes_category_2013, autopct='%1.1f%%')
-    plt.title("Crime per category 2013", fontsize = 24)
+    plt.title("Crime per category 2013", fontsize = 12)
 
     plt.legend(labels = final_categories, bbox_to_anchor=(1.5, 0), loc='lower left', borderaxespad=0.)
     
-    plt.suptitle('Question 2')
+    plt.suptitle('Question 2: Evolution of types of crime', fontsize = 14)
     plt.show()
     
         
@@ -112,7 +116,7 @@ def question_3():
     plt.bar(results.keys(), results.values())  
     plt.xlabel('xlabel', fontsize=5)
     plt.xticks(rotation=90)   
-    plt.title("Question 3") 
+    plt.title("Question 3: total number of crime per state in 2013", fontsize = 14) 
     plt.show()
 
 #   Question 4: Is there a connection between type of crimes and locations?
@@ -143,7 +147,7 @@ def question_4():
                     count += int(sheet.cell_value(row,column))
                 crimes_categories[sheet.cell_value(3, column)] = count  
     print("__________________")
-    print("question 4")
+    print("question 4: is there a link between state and types of crime")
     print("__________________")
     pprint.pprint(results)             
 
@@ -201,7 +205,7 @@ def question_5():
 
     plt.subplot(211)
     plt.bar(years, values)
-    plt.axis([min(years), max(years), 0, max(values)])
+    plt.axis([min(years), max(years), 0, max(values) * 1.05])
     plt.ylabel("Total number of crime", fontsize = 7)
     plt.title("Crimes per year", fontsize = 12)
 
@@ -210,15 +214,15 @@ def question_5():
     plt.ylabel("Number of crime", fontsize = 7)
     plt.title("Crimes per category in 1994", fontsize = 12)
     
-    plt.suptitle('Question 5')
+    plt.suptitle('Question 5: year with the most crime and what was most "popular" type of crime', fontsize = 14)
     plt.show()
 
 
 
     
 if __name__ == "__main__" :
-    webget.download(url_1, file_name_1)
-    webget.download(url_2, file_name_2)
+    download_doc1(sys.argv[1])
+    download_doc2(sys.argv[2])
     question_1()
     question_2()
     question_3()

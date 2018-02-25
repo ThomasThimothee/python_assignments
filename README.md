@@ -1,7 +1,7 @@
-How to execute the program:
-1 - clone/download our project in your desired local repository, we use a modified version of the webget module created in class, this modified webget module is provided in our project.
-2 - In your Command Prompt / Terminal, navigate to the correct repository in the assignment-1 folder
-3 - type: python bg_assignment_1.py https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/1tabledatadecoverviewpdf/table_1_crime_in_the_united_states_by_volume_and_rate_per_100000_inhabitants_1994-2013.xls/output.xls https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls
+How to execute the program:\n
+1 - clone/download our project in your desired local repository, we use a modified version of the webget module created in class, this modified webget module is provided in our project.\n
+2 - In your Command Prompt / Terminal, navigate to the correct repository in the assignment-1 folder\n
+3 - type: python bg_assignment_1.py https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/1tabledatadecoverviewpdf/table_1_crime_in_the_united_states_by_volume_and_rate_per_100000_inhabitants_1994-2013.xls/output.xls https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls\n
 
 notes: our program gives as output several graphs as well as a text output in the command prompt / terminal. The display of each graph is a "blocking call" meaning that you will need to close the diagram window in order to see the next one.
 Stretch-out the window of the graphs to see more clearly the information displayed.

@@ -5,25 +5,14 @@ import matplotlib.pyplot as plt
 import pprint
 
 
-filename_1 = "data1.xls"
-filename_2 = "data2.xls"
-
-
-
-def doc_1(argument):
-#    webget.download(argument)
-#    filename_1 = '
-    pass
-
-    
-def doc_2(argument):
-#    webget.download(argument)
-#    filename_2 =
-    pass
+url_1 = "https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/1tabledatadecoverviewpdf/table_1_crime_in_the_united_states_by_volume_and_rate_per_100000_inhabitants_1994-2013.xls/output.xls"
+url_2 = "https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2013.xls"
+file_name_1 = "data1.xls"
+file_name_2 = "data2.xls"
 
 #   Question 1: Has the crime decreased or increased over the last 20 years?
 def question_1():
-    wb = xlrd.open_workbook(filename_1)
+    wb = xlrd.open_workbook(file_name_1)
     sheet = wb.sheet_by_index(0)
     values = []
     years = []
@@ -51,12 +40,12 @@ def question_1():
 
 #   Question 2: Has the type of crime changed?
 def question_2():
-    wb = xlrd.open_workbook(filename_1)
+    wb = xlrd.open_workbook(file_name_1)
     sheet = wb.sheet_by_index(0)
     crimes_category_1994 = []
     crimes_category_2004 = []
     crimes_category_2013 = []
-    wb = xlrd.open_workbook(filename_1)
+    wb = xlrd.open_workbook(file_name_1)
     sheet = wb.sheet_by_index(0)
     categories = []
     final_categories = []
@@ -100,7 +89,7 @@ def question_2():
 # I collected total number of crime per state, I guess that if we had the data over 20 years we could
 # answer the question with a 3D histogram and see if one state recorded more crimes while others recorded less
 def question_3():
-    wb = xlrd.open_workbook(filename_2)
+    wb = xlrd.open_workbook(file_name_2)
     sheet = wb.sheet_by_index(0)
     state = "ALABAMA"
     count = 0
@@ -134,7 +123,7 @@ def question_4():
     crimes_categories = {}
     top ={}
 
-    wb = xlrd.open_workbook(filename_2)
+    wb = xlrd.open_workbook(file_name_2)
     sheet = wb.sheet_by_index(0)
     for row in range(4,9295):  
         if sheet.cell_value(row, 0) != "":
@@ -175,7 +164,7 @@ def top_cat(dic):
 
 #   Question 5: Which year was the most crime and what crime occured most times?
 def question_5():
-    wb = xlrd.open_workbook(filename_1)
+    wb = xlrd.open_workbook(file_name_1)
     sheet = wb.sheet_by_index(0)
     values = []
     years = []
@@ -228,8 +217,8 @@ def question_5():
 
     
 if __name__ == "__main__" :
-#    doc_1(sys.argv[1])
-#    doc_2(sys.argv[2])
+    webget.download(url_1, file_name_1)
+    webget.download(url_2, file_name_2)
     question_1()
     question_2()
     question_3()

@@ -3,10 +3,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-#csv_file = webget.download("https://github.com/PatrickFenger/pythonAssignments/raw/master/KoreanConflict.csv")
+#url = webget.download("https://github.com/PatrickFenger/pythonAssignments/raw/master/KoreanConflict.csv")
 csv_file = "./KoreanConflict.csv"
 csv = pd.read_csv(csv_file)
 csv_matrix = csv.as_matrix()
+
+
 
 def question_1():
     print(csv_matrix[(csv_matrix[:, 3] == "MARINE CORPS")].shape[0])
@@ -50,7 +52,7 @@ def question_4():
         division_casualties.append(csv_matrix[(csv_matrix[:, 18] == division)].shape[0])
 
     plt.bar(divisions_cleaned, division_casualties, color=["red"], width=0.5, linewidth=0, align='center')
-    plt.title("Casualties for divisions > 100", fontsize = 12)
+    plt.title("Casualties for each division > 100", fontsize = 12)
     plt.tick_params(axis='both', which='major', labelsize=8)
     plt.xticks(rotation=90)
     plt.show()
@@ -65,10 +67,13 @@ def question_5():
         home_states_by_type.append(csv_matrix[(csv_matrix[:, 13] == home_state)].shape[0])
 
     plt.bar(home_states_cleaned, home_states_by_type, width=0.5, linewidth=0, align='center')
-    plt.title("", fontsize = 12)
+    plt.title("Casualties for each state > 100", fontsize = 12)
     plt.tick_params(axis='both', which='major', labelsize=8)
     plt.xticks(rotation=90)
     plt.show()
 
 
+question_2()
+question_3()
+question_4()
 question_5()

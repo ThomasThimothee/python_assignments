@@ -15,6 +15,7 @@ def question_1():
 def question_2():
     enrollment_types = np.unique(csv_matrix[:, 2])
     enrollments_by_type = []
+
     for enroll_type in enrollment_types:
         enrollments_by_type.append(csv_matrix[(csv_matrix[:, 2] == enroll_type)].shape[0])
 
@@ -55,4 +56,19 @@ def question_4():
     plt.show()
 
 
-question_4()
+def question_5():
+    home_states = list(set(csv_matrix[:, 13]))
+    home_states_cleaned = [x for x in home_states if not pd.isnull(x) and csv_matrix[(csv_matrix[:, 13] == x)].shape[0] > 100]
+    
+    home_states_by_type = []
+    for home_state in home_states_cleaned:
+        home_states_by_type.append(csv_matrix[(csv_matrix[:, 13] == home_state)].shape[0])
+
+    plt.bar(home_states_cleaned, home_states_by_type, width=0.5, linewidth=0, align='center')
+    plt.title("", fontsize = 12)
+    plt.tick_params(axis='both', which='major', labelsize=8)
+    plt.xticks(rotation=90)
+    plt.show()
+
+
+question_5()

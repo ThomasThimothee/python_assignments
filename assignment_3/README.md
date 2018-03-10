@@ -16,7 +16,7 @@ python fifa_questions.py
 
 ## Results
 ### Question 3
----
+___
 ### What is the difference between the release clause and the value of the top 10 most valuable players?
 
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_3.png)

@@ -21,4 +21,4 @@ python fifa_questions.py
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_3.png)
 
 ### Result: 
- T. Kroos has the highest difference between his release clause and value at **__113800000__**
+ T. Kroos has the highest difference between his release clause and value at __**113800000**__

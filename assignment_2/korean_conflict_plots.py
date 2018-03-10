@@ -21,6 +21,8 @@ def question_2():
     for enroll_type in enrollment_types:
         enrollments_by_type.append(csv_matrix[(csv_matrix[:, 2] == enroll_type)].shape[0])
 
+    print(enrollment_types)
+    print(enrollments_by_type)
     plt.bar(enrollment_types, enrollments_by_type, width=0.4, linewidth=0, align='center')
     title = "Number of soldiers for each type of enrollment"
     plt.title(title, fontsize=12)
@@ -74,6 +76,3 @@ def question_5():
 
 
 question_2()
-question_3()
-question_4()
-question_5()

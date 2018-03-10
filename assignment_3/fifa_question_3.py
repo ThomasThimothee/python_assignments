@@ -35,7 +35,7 @@ def question_3():
     plt.title(title, fontsize=12, y=1.08)
     plt.xticks(player_names, rotation=90)
     plt.ylabel("Difference")
-    plt.savefig("fifa_question_3.png")
+    plt.show()
 
 
 question_3()

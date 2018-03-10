@@ -29,13 +29,13 @@ def question_3():
     plt.bar(player_names, player_differences,
             width=0.4, linewidth=0, align='center')
     title = "Difference between release clause and value of top 10 players"
-
+    
     # Small fix for the bottom of the graph so that the graph doesn't go too much outside the window
     plt.subplots_adjust(bottom=0.3)
-    plt.title(title, fontsize=12)
+    plt.title(title, fontsize=12, y=1.08)
     plt.xticks(player_names, rotation=90)
     plt.ylabel("Difference")
-    plt.show()
+    plt.savefig("fifa_question_3.png")
 
 
 question_3()

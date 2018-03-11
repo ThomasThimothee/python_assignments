@@ -15,7 +15,7 @@ def question_3():
 
     # Calculate the difference between the release clause and value for each player,
     # and put their name and the outcome of the calculation into a tuple. The output of the
-    # wholte expression is a list of tuples.
+    # whole expression is a list of tuples.
     differences = tuple([(name, (release_clause - value)) for release_clause, value,
                          name in zip(sorted_by_value[:, 18], sorted_by_value[:, 16], sorted_by_value[:, 1])])
 
@@ -32,6 +32,7 @@ def question_3():
     
     # Small fix for the bottom of the graph so that the graph doesn't go too much outside the window
     plt.subplots_adjust(bottom=0.3)
+    
     plt.title(title, fontsize=12, y=1.08)
     plt.xticks(player_names, rotation=90)
     plt.ylabel("Difference")

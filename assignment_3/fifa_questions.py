@@ -94,21 +94,21 @@ def question_3():
 
 
 def question_4():
-    ages, count = np.unique(csv_matrix[:, 6], return_counts = True)
+    ages, count = np.unique(fifa_csv[:, 6], return_counts = True)
     plt.bar(ages, count, width=0.4, linewidth = 0, align = 'center')
     title = "Frequency of age between players"
     plt.title(title, fontsize = 12)
     plt.xlabel("Age")
     plt.show()
 
-    heights, count = np.unique(csv_matrix[:, 9], return_counts = True)
+    heights, count = np.unique(fifa_csv[:, 9], return_counts = True)
     plt.bar(heights, count, width=0.4, linewidth = 0, align = 'center')
     title = "Frequency of height between players"
     plt.title(title, fontsize = 12)
     plt.xlabel("Height")
     plt.show()
 
-    weights, count = np.unique(csv_matrix[:, 10], return_counts = True)
+    weights, count = np.unique(fifa_csv[:, 10], return_counts = True)
     plt.bar(weights, count, width=0.4, linewidth = 0, align = 'center')
     title = "Frequency of weight between players"
     plt.title(title, fontsize = 12)

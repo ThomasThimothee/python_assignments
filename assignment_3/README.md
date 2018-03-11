@@ -29,7 +29,7 @@ python fifa_questions.py
 {'Bray Wanderers': 2360000.0, 'Limerick FC': 2480000.0, 'Drogheda United': 2580000.0}
 ```
 
-–––
+–––––––––––
 ### Question 3
 ### What is the difference between the release clause and the value of the top 10 most valuable players?
 

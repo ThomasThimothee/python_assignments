@@ -64,6 +64,27 @@ def bottom(dic, count):
     return(bottom)
 
 
+#Which nationality is the most frequent amongst all players
+def question_2():
+
+    #retrieve all nationalities in the dataset
+    nationalities = np.unique(fifa_csv[:, 14])
+    players_by_nationality = []
+
+    for nationality in nationalities:
+        players_by_nationality.append(fifa_csv[(fifa_csv[:, 14] == nationality)].shape[0])
+
+    plt.bar(nationalities, players_by_nationality, width=0.4, linewidth=0, align='center')
+    title = "Number of players from each nationality"
+    plt.title(title, fontsize=12)
+    plt.tick_params(axis='x', which='major', labelsize=4)
+    plt.tick_params(axis='y', which='major', labelsize=8)
+    plt.xticks(rotation=90)
+    plt.xticks(nationalities)
+    plt.ylabel("Players")
+    plt.show()
+
+
 # What is the difference between the release clause and the value of the top 10 most valuable players?
 def question_3():
 

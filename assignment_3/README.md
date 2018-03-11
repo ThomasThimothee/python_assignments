@@ -29,6 +29,17 @@ python fifa_questions.py
 {'Bray Wanderers': 2360000.0, 'Limerick FC': 2480000.0, 'Drogheda United': 2580000.0}
 ```
 
+------
+### Question 2
+### Which nationality is the most frequent amongst all players?
+
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_2.png)
+
+### Result:
+
+Most players are from England
+
+------
 ### Question 3
 ### What is the difference between the release clause and the value of the top 10 most valuable players?
 
@@ -36,9 +47,10 @@ python fifa_questions.py
 
 ### Result: 
  T. Kroos has the highest difference between his release clause and value at **113800000**
-___
 
-### Question 4: What is the frequency of age, height and weight for all players?
+------
+### Question 4
+### What is the frequency of age, height and weight for all players?
 
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part1.png)
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part2.png)
@@ -46,5 +58,7 @@ ___
 
 ### Result: 
  The most frequent age group is **26**, the most frequent height is **180** and the most frequent weight is **77**.
-___
+
+------
+### Question 5: How big is the average difference between value and wage of the players?
 

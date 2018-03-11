@@ -83,7 +83,7 @@ def question_2():
     summary = sum(nationality_players.values())
 
 
-
+    #get the percentage of players for each nationality
     percentages = {nationality: 100 * nationality_players[nationality] / summary for nationality in nationality_players.keys()}
 
     labels = []

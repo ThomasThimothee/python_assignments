@@ -67,16 +67,41 @@ def question_2():
     nationalities = np.unique(fifa_csv[:, 14])
     players_by_nationality = []
 
+
     for nationality in nationalities:
         players_by_nationality.append(fifa_csv[(fifa_csv[:, 14] == nationality)].shape[0])
 
-    plt.bar(nationalities, players_by_nationality, width=0.4, linewidth=0, align='center')
+    nationality_players = {}
+    for nationality in np.unique(fifa_csv[:, 14]):
+        nationality_players[nationality] = int(fifa_csv[(fifa_csv[:, 14] == nationality)].shape[0])
+
+    #sum of all players
+    summary = sum(nationality_players.values())
+
+
+
+    percentages = {nationality: 100 * nationality_players[nationality] / summary for nationality in nationality_players.keys()}
+
+    labels = []
+    totals = []
+
+    #get the nationalities that have more than 0.5% of all players
+    for nationality, percentage in percentages.items():
+        if percentage > 0.5:
+            labels.append(nationality)
+            totals.append(nationality_players[nationality])
+
+
+
+
+
+    plt.bar(labels, totals, width=0.4, linewidth=0, align='center')
     title = "Number of players from each nationality"
     plt.title(title, fontsize=12)
-    plt.tick_params(axis='x', which='major', labelsize=4)
+    plt.tick_params(axis='x', which='major', labelsize=8)
     plt.tick_params(axis='y', which='major', labelsize=8)
     plt.xticks(rotation=90)
-    plt.xticks(nationalities)
+    plt.xticks(labels)
     plt.ylabel("Players")
     plt.show()
 
@@ -136,8 +161,8 @@ def question_4():
     plt.xlabel("Weight")
     plt.show()
 
-question_1()
+#question_1()
 question_2()
-question_3()
-question_4()
+#question_3()
+#question_4()
 #question_5()

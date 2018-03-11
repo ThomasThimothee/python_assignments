@@ -60,5 +60,11 @@ Most players are from England
  The most frequent age group is **26**, the most frequent height is **180** and the most frequent weight is **77**.
 
 ------
-### Question 5: How big is the average difference between value and wage of the players?
+### Question 5
+### How big is the average difference between value and wage of the players?
+### Results:
+Difference between value and weekly wage of the players: **23.59.007,45 €**
+Difference between value and estimated monthly wage of the players: **2.324.495,94 €**
+Difference between value and estimated yearly wage of the players: **1.772.311,88 €**
+On average the value of a player is equivalent to **3.96** time his estimated yearly salary
 

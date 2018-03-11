@@ -15,6 +15,14 @@ python fifa_questions.py
 ```
 
 ## Results
+### Question 1
+### The 3 most expensive teams and the 3 cheapest teams according to player value.?
+### Resuls:
+```python
+3 most expensive teams (value in €):  {'Real Madrid CF': 828900000.0, 'FC Bayern Munich': 741450000.0, 'FC Barcelona': 737500000.0}
+3 least expensive teams (value in €):  {'Bray Wanderers': 2360000.0, 'Limerick FC': 2480000.0, 'Drogheda United': 2580000.0}
+```
+
 ### Question 3
 ### What is the difference between the release clause and the value of the top 10 most valuable players?
 

@@ -16,8 +16,8 @@ python fifa_questions.py
 
 ## Results
 ### Question 1
-### The 3 most expensive teams and the 3 cheapest teams according to player value.?
-### Resuls:
+### The 3 most expensive teams and the 3 cheapest teams according to player value?
+### Result:
 
 3 most expensive teams (value in €):  
 ```python
@@ -37,7 +37,6 @@ python fifa_questions.py
  T. Kroos has the highest difference between his release clause and value at **113800000**
 ___
 
-### Question 3
 ### Question 4: What is the frequency of age, height and weight for all players?
 
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part1.png)

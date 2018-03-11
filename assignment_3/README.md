@@ -1,4 +1,4 @@
-# Naughty Solution - FIFA
+﻿# Naughty Solution - FIFA
 ### Dependencies required
 ```python
 import webget
@@ -36,3 +36,15 @@ python fifa_questions.py
 ### Result: 
  T. Kroos has the highest difference between his release clause and value at **113800000**
 ___
+
+### Question 3
+### Question 4: What is the frequency of age, height and weight for all players?
+
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part1.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part2.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part3.png)
+
+### Result: 
+ The most frequent age group is **26**, the most frequent height is **180** and the most frequent weight is **77**.
+___
+

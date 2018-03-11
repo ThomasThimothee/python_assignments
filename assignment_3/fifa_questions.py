@@ -71,12 +71,8 @@ def question_2():
     nationalities = np.unique(fifa_csv[:, 14])
     players_by_nationality = []
 
-
-    for nationality in nationalities:
-        players_by_nationality.append(fifa_csv[(fifa_csv[:, 14] == nationality)].shape[0])
-
     nationality_players = {}
-    for nationality in np.unique(fifa_csv[:, 14]):
+    for nationality in nationalities:
         nationality_players[nationality] = int(fifa_csv[(fifa_csv[:, 14] == nationality)].shape[0])
 
     #sum of all players

@@ -73,7 +73,7 @@ def question_2():
     plt.bar(nationalities, players_by_nationality, width=0.4, linewidth=0, align='center')
     title = "Number of players from each nationality"
     plt.title(title, fontsize=12)
-    plt.tick_params(axis='x', which='major', labelsize=5)
+    plt.tick_params(axis='x', which='major', labelsize=4)
     plt.tick_params(axis='y', which='major', labelsize=8)
     plt.xticks(rotation=90)
     plt.xticks(nationalities)

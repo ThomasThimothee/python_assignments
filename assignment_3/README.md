@@ -33,6 +33,12 @@ python fifa_questions.py
 ### Question 2
 ### Which nationality is the most frequent amongst all players?
 
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_2.png)
+
+### Result:
+
+Most players are from England
+
 ------
 ### Question 3
 ### What is the difference between the release clause and the value of the top 10 most valuable players?

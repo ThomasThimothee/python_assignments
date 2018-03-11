@@ -69,7 +69,6 @@ def question_2():
 
     #retrieve all nationalities in the dataset
     nationalities = np.unique(fifa_csv[:, 14])
-    players_by_nationality = []
 
     nationality_players = {}
     for nationality in nationalities:

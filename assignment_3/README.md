@@ -16,7 +16,7 @@ python fifa_questions.py
 
 ## Results
 ### Question 1
-### The 3 most expensive teams and the 3 cheapest teams according to player value.?
+### The 3 most expensive teams and the 3 cheapest teams according to player value?
 ### Resuls:
 
 3 most expensive teams (value in €):  

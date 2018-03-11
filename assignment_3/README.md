@@ -66,5 +66,5 @@ Most players are from England
 Difference between value and weekly wage of the players: **23.59.007,45 €**<br />
 Difference between value and estimated monthly wage of the players: **2.324.495,94 €**<br />
 Difference between value and estimated yearly wage of the players: **1.772.311,88 €**<br />
-On average the value of a player is equivalent to **3.96** time his estimated yearly salary
+On average the value of a player is equivalent to **3.96** times his estimated yearly salary
 

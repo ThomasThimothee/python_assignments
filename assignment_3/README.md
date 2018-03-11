@@ -57,8 +57,14 @@ Most players are from England
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_4_part3.png)
 
 ### Result: 
- The most frequent age group is **26**, the most frequent height is **180** and the most frequent weight is **77**.
+ The most frequent age group is **25**, the most frequent height is **180** and the most frequent weight is **75**.
 
 ------
-### Question 5: How big is the average difference between value and wage of the players?
+### Question 5
+### How big is the average difference between value and wage of the players?
+### Results:
+Difference between value and weekly wage of the players: **23.59.007,45 €**<br />
+Difference between value and estimated monthly wage of the players: **2.324.495,94 €**<br />
+Difference between value and estimated yearly wage of the players: **1.772.311,88 €**<br />
+On average the value of a player is equivalent to **3.96** times his estimated yearly salary
 

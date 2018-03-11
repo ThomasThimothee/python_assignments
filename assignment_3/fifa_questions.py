@@ -28,8 +28,12 @@ def question_1():
 
     top3 = top(clubs_value, 3)
     botom3 = bottom(clubs_value, 3)
+    print("Question 1: ")
+    print("")
     print("3 most expensive teams (value in €): ", top3)
+    print("************************************")
     print("3 least expensive teams (value in €): ", botom3)
+    print("************************************")
 
 # function to extract n = count items with highest value
 def top(dic, count):
@@ -160,6 +164,41 @@ def question_4():
     plt.title(title, fontsize = 12)
     plt.xlabel("Weight")
     plt.show()
+
+def question_5():
+    players_value = []
+    players_weekly_wage = []
+    players_monthly_wage = []
+    players_yearly_wage = []
+
+    for row in fifa_csv:
+        if row[16] != "" and row[17] != "":
+            players_value.append(row[16])
+            players_weekly_wage.append(row[17])
+            players_monthly_wage.append(row[17] * 4)
+            players_yearly_wage.append(row[17] * 52)
+
+    #numpy.mean() provides the mean/average value of a list    
+    #round() round a value (passed as first argument) with a precision of second_argument
+    av_players_value = round(np.mean(players_value), 2)
+    av_players_weekly_wage = round(np.mean(players_weekly_wage), 2)
+    av_players_monthly_wage = round(np.mean(players_monthly_wage), 2)
+    av_players_yearly_wage = round(np.mean(players_yearly_wage), 2)
+    print("Question 5: ")
+    print("")
+    print("Average difference between players value and players weekly wage:")
+    print(av_players_value - av_players_weekly_wage)
+    print("************************************")
+    print("Average difference between players value and players estimated monthly wage:")
+    print(av_players_value - av_players_monthly_wage)
+    print("************************************")
+    print("Average difference between players value and players estimated yearly wage:")
+    print(av_players_value - av_players_yearly_wage)
+    print("************************************")
+    print("On average, the value of a player is equivalent to {} times his estimated yearly salary".format(round(av_players_value/av_players_yearly_wage, 2)))
+ 
+
+    
 
 question_1()
 question_2()

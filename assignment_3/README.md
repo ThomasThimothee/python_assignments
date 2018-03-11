@@ -17,7 +17,7 @@ python fifa_questions.py
 ## Results
 ### Question 1
 ### The 3 most expensive teams and the 3 cheapest teams according to player value?
-### Resuls:
+### Result:
 
 3 most expensive teams (value in €):  
 ```python
@@ -27,12 +27,16 @@ python fifa_questions.py
 ```python
 {'Bray Wanderers': 2360000.0, 'Limerick FC': 2480000.0, 'Drogheda United': 2580000.0}
 ```
-----------
+
+---
 ### Question 3
 ### What is the difference between the release clause and the value of the top 10 most valuable players?
 
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_3.png)
 
 ### Result: 
-#### T. Kroos has the highest difference between his release clause and value at **113800000**
-----------
+T. Kroos has the highest difference between his release clause and value at **113800000**
+
+---
+
+

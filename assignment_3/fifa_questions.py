@@ -161,8 +161,8 @@ def question_4():
     plt.xlabel("Weight")
     plt.show()
 
-#question_1()
+question_1()
 question_2()
-#question_3()
-#question_4()
-#question_5()
+question_3()
+question_4()
+question_5()

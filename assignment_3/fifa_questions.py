@@ -170,7 +170,7 @@ def question_5():
     print("Average difference between players value and players estimated yearly wage:")
     print(av_players_value - av_players_yearly_wage)
     print("************************************")
-    print("In average, the value of a player is equivalent to {} time his estimated yearly salary".format(round(av_players_value/av_players_yearly_wage, 2)))
+    print("On average, the value of a player is equivalent to {} times his estimated yearly salary".format(round(av_players_value/av_players_yearly_wage, 2)))
  
 
     

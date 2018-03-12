@@ -63,7 +63,7 @@ Most players are from England
 ### Question 5
 ### How big is the average difference between value and wage of the players?
 ### Results:
-Difference between value and weekly wage of the players: **23.59.007,45 €**<br />
+Difference between value and weekly wage of the players: **2.359.007,45 €**<br />
 Difference between value and estimated monthly wage of the players: **2.324.495,94 €**<br />
 Difference between value and estimated yearly wage of the players: **1.772.311,88 €**<br />
 On average the value of a player is equivalent to **3.96** times his estimated yearly salary

@@ -98,7 +98,7 @@ def question_2():
     plt.xticks(rotation=90)
     plt.xticks(labels)
     plt.ylabel("Players")
-    plt.savefig("fifa_question_2.png")
+    plt.show()
 
 
 # What is the difference between the release clause and the value of the top 10 most valuable players?
@@ -115,11 +115,12 @@ def question_3():
                          name in zip(sorted_by_value[:, 18], sorted_by_value[:, 16], sorted_by_value[:, 1])])
 
     # Extract the names from the tuple and put them into a list
-    player_names = [name[0] for name in differences]
+    player_names = np.asarray([name[0] for name in differences])
 
+    print(player_names)
     # Extract the calculated differences for each player, cast them to ints and put them into a list
     player_differences = [int(dif[1]) for dif in differences]
-
+    print(player_differences)
     # Plot a bar diagram with the player names as X-values, and the differences as Y-values
     plt.bar(player_names, player_differences,
             width=0.4, linewidth=0, align='center')
@@ -129,7 +130,7 @@ def question_3():
     plt.subplots_adjust(bottom=0.3)
 
     plt.title(title, fontsize=12, y=1.08)
-    plt.xticks(player_names, rotation=90)
+    plt.xticks(rotation=90)
     plt.ylabel("Difference")
     plt.show()
 
@@ -189,8 +190,8 @@ def question_5():
     print("On average, the value of a player is equivalent to {} times his estimated yearly salary".format(round(av_players_value/av_players_yearly_wage, 2)))
  
 
-#question_1()
+question_1()
 question_2()
-#question_3()
-#question_4()
-#question_5()
+question_3()
+question_4()
+question_5()

@@ -46,7 +46,7 @@ Most players are from England
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_3/plot_images/fifa_question_3.png)
 
 ### Result: 
- **Neymar** has the highest difference between his release clause and value at **113800000** (Plot incorrectly places the names, will fix)
+ **Neymar** has the highest difference between his release clause and value at **113800000**
 
 ------
 ### Question 4

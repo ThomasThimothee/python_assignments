@@ -64,45 +64,41 @@ def bottom(dic, count):
     return(bottom)
 
 
-#Which nationality is the most frequent amongst all players
+# Which nationality is the most frequent amongst all players
 def question_2():
 
-    #retrieve all nationalities in the dataset
+    # Retrieve all nationalities in the dataset
     nationalities = np.unique(fifa_csv[:, 14])
 
     nationality_players = {}
     for nationality in nationalities:
         nationality_players[nationality] = int(fifa_csv[(fifa_csv[:, 14] == nationality)].shape[0])
 
-    #sum of all players
+    # Sum of all players
     summary = sum(nationality_players.values())
 
-
-    #get the percentage of players for each nationality
+    # Get the percentage of players for each nationality
     percentages = {nationality: 100 * nationality_players[nationality] / summary for nationality in nationality_players.keys()}
 
     labels = []
     totals = []
 
-    #get the nationalities that have more than 0.5% of all players
+    # Get the nationalities that have more than 0.5% of all players
     for nationality, percentage in percentages.items():
-        if percentage > 0.5:
+        if percentage > 3.0:
             labels.append(nationality)
             totals.append(nationality_players[nationality])
-
-
-
-
 
     plt.bar(labels, totals, width=0.4, linewidth=0, align='center')
     title = "Number of players from each nationality"
     plt.title(title, fontsize=12)
-    plt.tick_params(axis='x', which='major', labelsize=5)
-    plt.tick_params(axis='y', which='major', labelsize=8)
+    plt.tick_params(axis='x', which='major')
+    plt.tick_params(axis='y', which='major')
+    plt.subplots_adjust(bottom=0.2)
     plt.xticks(rotation=90)
     plt.xticks(labels)
     plt.ylabel("Players")
-    plt.show()
+    plt.savefig("fifa_question_2.png")
 
 
 # What is the difference between the release clause and the value of the top 10 most valuable players?
@@ -193,10 +189,8 @@ def question_5():
     print("On average, the value of a player is equivalent to {} times his estimated yearly salary".format(round(av_players_value/av_players_yearly_wage, 2)))
  
 
-    
-
-question_1()
+#question_1()
 question_2()
-question_3()
-question_4()
-question_5()
+#question_3()
+#question_4()
+#question_5()

@@ -105,3 +105,7 @@ ENV/
 
 # assignment_3
 complete.csv
+
+# assignment_4
+title.basics.tsv.gz
+

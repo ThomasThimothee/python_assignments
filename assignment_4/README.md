@@ -5,8 +5,9 @@
 The webget module is provided in the repository.
 
 ### How to run
-Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_3/), and then run the command below
+Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_4/), and then run the command below
 ```
+python imdb_questions.py
 ```
 
 ## Results

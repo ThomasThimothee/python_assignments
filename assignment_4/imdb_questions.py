@@ -4,9 +4,14 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-imdb_csv = pd.read_table(webget.download(
-    "https://datasets.imdbws.com/title.basics.tsv.gz"), compression="gzip", sep="\t")
+imdb_csv = pd.read_table(webget.download("https://datasets.imdbws.com/title.basics.tsv.gz"), compression="gzip", sep="\t", dtype={"startYear" : str})
 
+
+# This part is dumb, need to figure out a smarter way of doing it. It basically just removes all the rows with \N in them
+# The 'r' before the string produces a raw string, and without it, the '\N' will be interpreted as an escape character
+imdb_csv = imdb_csv[imdb_csv.startYear != r"\N"]
+imdb_csv = imdb_csv[imdb_csv.runtimeMinutes != r"\N"]
+imdb_csv = imdb_csv[imdb_csv.genres != r"\N"]
 
 # Question 1: The 3 most expensive teams and the 3 cheapest teams according to player value.
 def question_1():
@@ -21,6 +26,14 @@ def question_1():
     plt.show()
 
 
+def question_5():
+    avg_runtime_adult = np.asarray(imdb_csv.groupby("isAdult").get_group(1)["runtimeMinutes"]).astype(int).mean()
+    print(round(avg_runtime_adult, 2))
+
+
 question_1()
+question_5()
+
+
 
 

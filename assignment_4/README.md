@@ -38,6 +38,10 @@ The year with the most movies released is **2016**
 
 ------
 ### Question 5
-### Question Text Here
+### What is the average runtime on adult films?
 
 ### Results:
+
+```python
+avg_adult_runtime = 105.72
+```

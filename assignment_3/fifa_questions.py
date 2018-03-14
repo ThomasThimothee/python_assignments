@@ -5,10 +5,17 @@ import random
 import matplotlib.pyplot as plt
 
 fifa_csv = pd.read_csv(webget.download(
-    "https://raw.githubusercontent.com/INFINITE-KH/Python-Dataset/master/complete.csv")).replace(np.nan, "", regex=True).as_matrix()
+    "https://raw.githubusercontent.com/INFINITE-KH/Python-Dataset/master/complete.csv"))
 
 
 # Question 1: The 3 most expensive teams and the 3 cheapest teams according to player value.
+def question_1_new():
+    top_3 = fifa_csv.groupby('club')['eur_value'].sum().sort_values(ascending=False).head(3)
+    
+    bottom_3 = fifa_csv.groupby('club')['eur_value'].sum().sort_values(ascending=False).tail(3)
+    print(top_3)
+    print(bottom_3)
+
 def question_1():
 
     # retrieve all the clubs present in the dataset
@@ -117,10 +124,9 @@ def question_3():
     # Extract the names from the tuple and put them into a list
     player_names = np.asarray([name[0] for name in differences])
 
-    print(player_names)
     # Extract the calculated differences for each player, cast them to ints and put them into a list
     player_differences = [int(dif[1]) for dif in differences]
-    print(player_differences)
+    
     # Plot a bar diagram with the player names as X-values, and the differences as Y-values
     plt.bar(player_names, player_differences,
             width=0.4, linewidth=0, align='center')
@@ -190,8 +196,8 @@ def question_5():
     print("On average, the value of a player is equivalent to {} times his estimated yearly salary".format(round(av_players_value/av_players_yearly_wage, 2)))
  
 
-question_1()
-question_2()
-question_3()
-question_4()
-question_5()
+question_1_new()
+#question_2()
+#question_3()
+#question_4()
+#question_5()

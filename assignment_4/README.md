@@ -1,7 +1,6 @@
-﻿# Naughty Solution - FIFA
+﻿# Bloody Television  - IMDB
 ### Dependencies required
 ```python
-
 ```
 The webget module is provided in the repository.
 

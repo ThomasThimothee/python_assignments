@@ -11,9 +11,12 @@ Simply clone the repository, navigate into the correct folder (/python_assignmen
 
 ## Results
 ### Question 1
-### Question Text Here
+### Which year was the most movies released?
+
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1.png)
 
 ### Result:
+The year with the most movies released is **2016**
 
 ------
 ### Question 2

@@ -14,7 +14,7 @@ python imdb_questions.py
 ### Question 1
 ### Which year was the most movies released?
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1_new.png)
 
 ### Result:
 The year with the most movies released is **2016**

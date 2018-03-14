@@ -23,7 +23,8 @@ def question_1():
     plt.title("Number of movies released for each year", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Movies released")
-    plt.show()
+    plt.savefig("imdb_question_1.png")
+    #plt.show()
 
 
 def question_5():
@@ -32,7 +33,7 @@ def question_5():
 
 
 question_1()
-question_5()
+#question_5()
 
 
 

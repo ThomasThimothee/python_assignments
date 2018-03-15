@@ -13,7 +13,7 @@ imdb_csv = imdb_csv[imdb_csv.startYear != r"\N"]
 imdb_csv = imdb_csv[imdb_csv.runtimeMinutes != r"\N"]
 imdb_csv = imdb_csv[imdb_csv.genres != r"\N"]
 
-# Question 1: The 3 most expensive teams and the 3 cheapest teams according to player value.
+# Question 1: Which year was the most movies released?
 def question_1():
     top_ten_years = imdb_csv.groupby("startYear")["startYear"].count().sort_values(ascending=False).head(10).plot.bar()
 
@@ -23,17 +23,17 @@ def question_1():
     plt.title("Number of movies released for each year", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Movies released")
-    plt.savefig("imdb_question_1.png")
-    #plt.show()
+    plt.show()
 
 
+# Question 5: What is the average runtime on adult films?
 def question_5():
     avg_runtime_adult = np.asarray(imdb_csv.groupby("isAdult").get_group(1)["runtimeMinutes"]).astype(int).mean()
     print(round(avg_runtime_adult, 2))
 
 
 question_1()
-#question_5()
+question_5()
 
 
 

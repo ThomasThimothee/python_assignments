@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 fifa_csv = pd.read_csv(webget.download(
     "https://raw.githubusercontent.com/INFINITE-KH/Python-Dataset/master/complete.csv"))
-
+    
 
 # Question 1: The 3 most expensive teams and the 3 cheapest teams according to player value.
 def question_1_new():

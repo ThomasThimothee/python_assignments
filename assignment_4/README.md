@@ -33,10 +33,12 @@ The year with the most movies released is **2015**
 
 ------
 ### Question 4
-### Question Text Here
+### Which genre covers the most movies?
+
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/question4.png)
 
 ### Result: 
-
+The genre with the most movies released is **Drama**
 ------
 ### Question 5
 ### What is the average runtime on adult films?

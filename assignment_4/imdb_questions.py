@@ -24,17 +24,23 @@ def question_1():
     plt.xticks(rotation=90)
     plt.ylabel("Movies released")
     plt.show()
-
-
+# Question 4: Which genre covers the most movies?
+def question_4():
+    top_genres = imdb_csv.groupby("genres")["genres"].count().sort_values(ascending=False).head(15).plot.bar()
+    plt.subplots_adjust(bottom=0.2, left=0.15)
+    plt.title("Movies By genre", fontsize=12, y=1.08)
+    plt.xticks(rotation=90)
+    plt.ylabel("Movies released")
+    plt.show()
 # Question 5: What is the average runtime on adult films?
 def question_5():
     avg_runtime_adult = np.asarray(imdb_csv.groupby("isAdult").get_group(1)["runtimeMinutes"]).astype(int).mean()
     print(round(avg_runtime_adult, 2))
 
 
-question_1()
-question_5()
-
+#question_1()
+#question_5()
+question_4()
 
 
 

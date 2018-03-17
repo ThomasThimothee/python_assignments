@@ -32,7 +32,7 @@ def question_2():
 
     # Small fix for the bottom of the graph so that the graph doesn't go too much outside the window
     plt.subplots_adjust(bottom=0.2, left=0.15)
-    
+
     plt.title("Series by end year", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Series ended")
@@ -54,8 +54,10 @@ def question_5():
 
 
 question_1()
-question_5()
-question_4()
 question_2()
+question_4()
+question_5()
+
+
 
 

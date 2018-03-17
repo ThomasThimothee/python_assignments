@@ -21,10 +21,11 @@ The year with the most movies released is **2015**
 
 ------
 ### Question 2
-### Question Text Here
+### Which year was the most series ended?
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_4.png)
 
 ### Result:
-
+The year which most series ended is **2017**
 ------
 ### Question 3
 ### Question Text Here

@@ -10,6 +10,7 @@ imdb_csv = pd.read_table(webget.download("https://datasets.imdbws.com/title.basi
 # This part is dumb, need to figure out a smarter way of doing it. It basically just removes all the rows with \N in them
 # The 'r' before the string produces a raw string, and without it, the '\N' will be interpreted as an escape character
 imdb_csv = imdb_csv[imdb_csv.startYear != r"\N"]
+imdb_csv = imdb_csv[imdb_csv.endYear != r"\N"]
 imdb_csv = imdb_csv[imdb_csv.runtimeMinutes != r"\N"]
 imdb_csv = imdb_csv[imdb_csv.genres != r"\N"]
 
@@ -29,6 +30,9 @@ def question_1():
 def question_2():
     top_5 = imdb_csv.groupby("endYear")["endYear"].count().sort_values(ascending=False).head(5).plot.bar()
 
+    # Small fix for the bottom of the graph so that the graph doesn't go too much outside the window
+    plt.subplots_adjust(bottom=0.2, left=0.15)
+    
     plt.title("Series by end year", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Series ended")

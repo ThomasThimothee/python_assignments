@@ -16,7 +16,7 @@ python imdb_questions.py
 ```
 The downloading takes between 10 and 15 sec, then the first graph appears. Sometimes the graph window gets generated in the background so if after 15 sec you don't see anything, check for other windows.
 
-## Results
+------
 ### Question 1
 ### Which year was the most movies released?
 

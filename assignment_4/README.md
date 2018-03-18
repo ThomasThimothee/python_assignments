@@ -1,4 +1,4 @@
-﻿# Bloody Television  - IMDB
+# Bloody Television  - IMDB
 ### Dependencies required
 ```python
 ```
@@ -15,15 +15,15 @@ The downloading takes between 10 and 15 sec, then the first graph appears. Somet
 ### Question 1
 ### Which year was the most movies released?
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1_new.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1.png)
 
 ### Result:
-The year with the most movies released is **2015**
+The year with the most movies released is **2016**
 
 ------
 ### Question 2
 ### Which year was the most series ended?
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_2.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_2_new.png)
 
 ### Result:
 The year which most series ended is **2017**
@@ -37,7 +37,7 @@ The year which most series ended is **2017**
 ### Question 4
 ### Which genre covers the most movies?
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/question4.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_4_new.png)
 
 ### Result: 
 The genre with the most movies released is **Drama**

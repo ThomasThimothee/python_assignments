@@ -19,7 +19,7 @@ def question_1():
     plt.title("Number of movies released for each year", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Movies released")
-    plt.savefig("imdb_question_1.png")
+    plt.show()
 
 
 #Question 2: Which year was the most series ended?
@@ -34,19 +34,20 @@ def question_2():
     plt.title("Series by end year", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Series ended")
-    plt.savefig("imdb_question_2.png")
+    plt.show()
 
     
-# Question 3: Which genres has the longest runtime per movies?
-def question_3():
-    imdb_csv_filtered = imdb_csv[imdb_csv.runtimeMinutes != r"\N"]
+# Question 3: Which genres has the longest runtime per movie?
+#def question_3():
+    #imdb_csv_filtered = imdb_csv[imdb_csv.runtimeMinutes != r"\N"].replace(r"\\N", "", regex=True)
+    #imdb_csv_filtered = imdb_csv[imdb_csv.genres != r"\N"]
 
-    sum_minutes_genres = imdb_csv_filtered.groupby("genres")["runtimeMinutes"].sum()
-    count_film_genres = imdb_csv_filtered.groupby("genres")["genres"].count()
+    #sum_minutes_genres = imdb_csv_filtered.groupby("genres")["runtimeMinutes"].sum()
+    #count_film_genres = imdb_csv_filtered.groupby("genres")["genres"].count()
 
-    runtime_per_genre = []
-    for genre in count_film_genres.index:
-        runtime_per_genre.append((genre, round(sum_minutes_genres.loc[genre] / count_film_genres.loc[genre], 2)))
+    #runtime_per_genre = []
+    #for genre in count_film_genres.index:
+       #runtime_per_genre.append((genre, round(sum_minutes_genres.loc[genre] / count_film_genres.loc[genre], 2)))
 
 
 # Question 4: Which genre covers the most movies?
@@ -58,7 +59,7 @@ def question_4():
     plt.title("Movies By genre", fontsize=12, y=1.08)
     plt.xticks(rotation=90)
     plt.ylabel("Movies released")
-    plt.savefig("imdb_question_4.png")
+    plt.show()
 
 
 # Question 5: What is the average runtime on adult films?
@@ -66,11 +67,13 @@ def question_5():
     imdb_csv_filtered = imdb_csv[imdb_csv.runtimeMinutes != r"\N"]
 
     avg_runtime_adult = np.asarray(imdb_csv_filtered.groupby("isAdult").get_group(1)["runtimeMinutes"]).astype(int).mean()
+    
     print(round(avg_runtime_adult, 2))
 
 
 question_1()
 question_2()
+#question_3()
 question_4()
 question_5()
 

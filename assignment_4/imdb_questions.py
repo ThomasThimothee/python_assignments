@@ -38,6 +38,18 @@ def question_2():
     plt.ylabel("Series ended")
     plt.show()
 
+    
+# Question 3: Which genres has the longest runtime per movies?
+def question_3():
+    sum_minutes_genres = imdb_csv.groupby("genres")["runtimeMinutes"].sum()
+    count_film_genres = imdb_csv.groupby("genres")["genres"].count()
+
+    runtime_per_genre = []
+    for genre in count_film_genres.index:
+        runtime_per_genre.append((genre, round(sum_minutes_genres.loc[genre] / count_film_genres.loc[genre], 2)))
+        
+ 
+
 
 # Question 4: Which genre covers the most movies?
 def question_4():

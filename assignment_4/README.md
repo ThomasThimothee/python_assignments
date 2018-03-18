@@ -27,6 +27,7 @@ The year with the most movies released is **2016**
 
 ### Result:
 The year which most series ended is **2017**
+
 ------
 ### Question 3
 ### Question Text Here
@@ -41,6 +42,7 @@ The year which most series ended is **2017**
 
 ### Result: 
 The genre with the most movies released is **Drama**
+
 ------
 ### Question 5
 ### What is the average runtime on adult films?
@@ -48,5 +50,5 @@ The genre with the most movies released is **Drama**
 ### Results:
 
 ```python
-avg_adult_runtime = 50.58
+avg_adult_runtime = 104.72
 ```

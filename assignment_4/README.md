@@ -2,10 +2,10 @@
 ### Dependencies required
 ```python
 import webget
-import pandas as pd
-import numpy as np
+import pandas 
+import numpy 
 import random
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 ```
 The webget module is provided in the repository.
 

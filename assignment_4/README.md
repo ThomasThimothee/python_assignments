@@ -47,5 +47,5 @@ The genre with the most movies released is **Drama**
 ### Results:
 
 ```python
-avg_adult_runtime = 50min and 58sec
+avg_adult_runtime = 50.58
 ```

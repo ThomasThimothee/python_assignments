@@ -18,7 +18,7 @@ The downloading takes between 10 and 15 sec, then the first graph appears. Somet
 ![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1.png)
 
 ### Result:
-The year with the most movies released is **2015**
+The year with the most movies released is **2016**
 
 ------
 ### Question 2
@@ -37,7 +37,7 @@ The year which most series ended is **2017**
 ### Question 4
 ### Which genre covers the most movies?
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_4.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_4_new.png)
 
 ### Result: 
 The genre with the most movies released is **Drama**

@@ -1,6 +1,11 @@
 # Bloody Television  - IMDB
 ### Dependencies required
 ```python
+import webget
+import pandas as pd
+import numpy as np
+import random
+import matplotlib.pyplot as plt
 ```
 The webget module is provided in the repository.
 
@@ -30,9 +35,10 @@ The year which most series ended is **2017**
 
 ------
 ### Question 3
-### Question Text Here
+### Which genres has the longest runtime per movie?
 
 ### Result: 
+Missing a result for question 3, as we couldn't figure out how to read the runtimeMinutes column as Int rather than String.
 
 ------
 ### Question 4

@@ -1,52 +1,43 @@
-﻿# Bloody Television  - IMDB
+# Impossible Technology  - Songs
 ### Dependencies required
 ```python
 ```
 The webget module is provided in the repository.
 
 ### How to run
-Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_4/), and then run the command below
+Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_5/), and then run the command below
 ```
-python imdb_questions.py
+python songs_questions.py
 ```
-The downloading takes between 10 and 15 sec, then the first graph appears. Sometimes the graph window gets generated in the background so if after 15 sec you don't see anything, check for other windows.
 
 ## Results
 ### Question 1
-### Which year was the most movies released?
+### What is the most used words in the songs?
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_1_new.png)
 
 ### Result:
-The year with the most movies released is **2015**
 
 ------
 ### Question 2
-### Which year was the most series ended?
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/imdb_question_2.png)
+### How many times are each word repeated in a song?
 
 ### Result:
-The year which most series ended is **2017**
+
 ------
 ### Question 3
-### Question Text Here
+### What song uses the word "X" the most time? (X meaning a specific word, choose your own!)
 
 ### Result: 
 
 ------
 ### Question 4
-### Which genre covers the most movies?
-
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_4/plot_images/question4.png)
+### What is the average number of words per song?
 
 ### Result: 
-The genre with the most movies released is **Drama**
+
 ------
 ### Question 5
-### What is the average runtime on adult films?
+### Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
 
 ### Results:
 
-```python
-avg_adult_runtime = 50.58
-```

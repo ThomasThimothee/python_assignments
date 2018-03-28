@@ -22,12 +22,19 @@ def question_1():
 
 #Question 2: How many times are each word repeated in a song?
 def question_2():
-    pass
-
+    mask = ((songs_csv[: ,0] == "Boney M.") & (songs_csv[:, 1] == "Daddy Cool"))
+    song = songs_csv[mask][:, 3]
+    song_split = song[0].split()
+    print(Counter(song_split))
+    ## TO-DO need to find a way to trim special character and ignore case so "cool?" = "cool" and "Cool"= "cool"
     
 # Question 3: What song uses the word "X" the most time? (X meaning a specific word, choose your own!)
 def question_3():
-    pass
+    mask = ((songs_csv[: ,0] == "Young Buck") & (songs_csv[:, 1] == "Bang Bang"))
+    song = songs_csv[mask][:, 3]
+    song_split = song[0].split()
+    selected_word = "bang"
+    print(song_split.count(selected_word))
 
 
 # Question 4: What is the average number of words per song?
@@ -40,8 +47,9 @@ def question_5():
     pass
 
 
-question_1()
-
+#question_1()
+#question_2()
+question_3()
 
 
 

@@ -24,7 +24,7 @@ python songs_questions.py
 ### Result:
 In our example we decided to study the song "Daddy cool" from Boney M. Not a very long and rich song. Below you can find the different words and their occurence in the song. The results are printed in the terminal/command prompt.
 ```
-python {'Daddy': 23, 'She': 7, 'Cool': 7, 'crazy': 6, 'about': 6, 'is': 5, 'like': 5, 'a': 5, 'What': 5, 'it': 5, 'fool.': 4, 'cool?': 3, '(yeh)': 2, 'her': 2, 'fool': 1, 'cool': 1, "I'm": 1, 'Cool?': 1, 'Cool.': 1, 'Oh': 1, 'believes': 1, 'in': 1, 'him': 1, 'loves': 1})
+{'Daddy': 23, 'She': 7, 'Cool': 7, 'crazy': 6, 'about': 6, 'is': 5, 'like': 5, 'a': 5, 'What': 5, 'it': 5, 'fool.': 4, 'cool?': 3, '(yeh)': 2, 'her': 2, 'fool': 1, 'cool': 1, "I'm": 1, 'Cool?': 1, 'Cool.': 1, 'Oh': 1, 'believes': 1, 'in': 1, 'him': 1, 'loves': 1})
 ```
 ------
 ### Question 3
@@ -33,7 +33,7 @@ python {'Daddy': 23, 'She': 7, 'Cool': 7, 'crazy': 6, 'about': 6, 'is': 5, 'like
 ### Result: 
 In our example we decided to study the song "Bang bang" from Young Buck. We decided to see how many times the word "bang" is repeated. The result should appear in your terminal/command prompt
 ```
-python 23 times
+23 times
 ```
 ------
 ### Question 4

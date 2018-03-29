@@ -5,6 +5,7 @@ import random
 import matplotlib.pyplot as plt
 from collections import Counter
 import re
+import matplotlib.pyplot as plt
 
 
 songs_csv = pd.read_csv(webget.download("https://github.com/KasperOnFire/ImpossibleTechnology/raw/master/Datasets/songdata.csv")).as_matrix()
@@ -21,9 +22,18 @@ def question_1():
     # Take each song's text, and split it by using the regular expression defined above.
     songs_split = [re.split(regex, song) for song in songs_without_n]
     # Convert the songs_split list, which is a list of lists, into one list with all the values.
-    songs_flatlist = np.asarray([word for song in songs_split for word in song])
-    # Use collections.Counter to count the occurences of each word in the songs.
-    songs_counted = Counter(songs_flatlist)
+    songs_flatlist = np.asarray([word.lower() for song in songs_split for word in song])
+    # Use collections.Counter to count the occurences of each word in the songs, and select the top 20.
+    songs_counted_top_20 = Counter(songs_flatlist).most_common(20)
+
+    words = [word_tuple[0] for word_tuple in songs_counted_top_20]
+    word_counts = [word_tuple[1] for word_tuple in songs_counted_top_20]
+
+    plt.bar(words, word_counts, width=0.4, linewidth=0, align='center')
+    plt.title("Top 20 occurences of words", fontsize=12)
+    plt.subplots_adjust(bottom=0.2)
+    plt.xticks(rotation=70)
+    plt.savefig("songs_questions_1.png")
 
 
 #Question 2: How many times are each word repeated in a song?
@@ -53,9 +63,9 @@ def question_5():
     pass
 
 
-#question_1()
+question_1()
 #question_2()
-question_3()
+#question_3()
 
 
 

@@ -46,6 +46,10 @@ In our example we decided to study the song "Bang bang" from Young Buck. We deci
 ------
 ### Question 4
 ### What is the average number of words per song?
+If you run the question 4, the result will be displayed in the terminal
+```
+Average number of words: 217.847
+```
 
 ### Result: 
 

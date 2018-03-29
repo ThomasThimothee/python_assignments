@@ -4,20 +4,26 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 from collections import Counter
+import re
 
 
 songs_csv = pd.read_csv(webget.download("https://github.com/KasperOnFire/ImpossibleTechnology/raw/master/Datasets/songdata.csv")).as_matrix()
 
 # Question 1: What is the most used words in the songs?
 def question_1():
-    songs = songs_csv[:, 3] 
-    songs_split = [song.split() for song in songs]
+    
+    # Grab all the strings with the songs' text and throw them into the variable songs.
+    songs = songs_csv[:, 3]
+    # The regular expression used to grab words, even if they have an apostrophe.
+    regex = re.compile(r"\b[^A-Za-z']+\b'?")
+    # Substitute all the newlines (\n) with an empty space.
+    songs_without_n = [re.sub(r"\n", "", song) for song in songs]
+    # Take each song's text, and split it by using the regular expression defined above.
+    songs_split = [re.split(regex, song) for song in songs_without_n]
+    # Convert the songs_split list, which is a list of lists, into one list with all the values.
     songs_flatlist = np.asarray([word for song in songs_split for word in song])
-    print(Counter(songs_flatlist))
-
-    
-    ## TO-DO - try to figure out if it's possible to use a regex for the split function, because we end up with words like "(rhythm", "one!", "left.", "(Hey!)" etc. 
-    
+    # Use collections.Counter to count the occurences of each word in the songs.
+    songs_counted = Counter(songs_flatlist)
 
 
 #Question 2: How many times are each word repeated in a song?

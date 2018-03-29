@@ -9,14 +9,15 @@ import matplotlib.pyplot as plt
 
 
 songs_csv = pd.read_csv(webget.download("https://github.com/KasperOnFire/ImpossibleTechnology/raw/master/Datasets/songdata.csv")).as_matrix()
+# The regular expression used to grab words, even if they have an apostrophe.
+regex = re.compile(r"\b[^A-Za-z']+\b'?")
 
-# Question 1: What is the most used words in the songs?
+
+# Question 1: What are the most used words in the songs?
 def question_1():
     
     # Grab all the strings with the songs' text and throw them into the variable songs.
     songs = songs_csv[:, 3]
-    # The regular expression used to grab words, even if they have an apostrophe.
-    regex = re.compile(r"\b[^A-Za-z']+\b'?")
     # Substitute all the newlines (\n) with an empty space.
     songs_without_n = [re.sub(r"\n", "", song) for song in songs]
     # Take each song's text, and split it by using the regular expression defined above.
@@ -39,16 +40,16 @@ def question_1():
 #Question 2: How many times are each word repeated in a song?
 def question_2():
     mask = ((songs_csv[: ,0] == "Boney M.") & (songs_csv[:, 1] == "Daddy Cool"))
-    song = songs_csv[mask][:, 3]
-    song_split = song[0].split()
+    song = [re.sub(r"\n", "", song) for song in songs_csv[mask][:, 3]]
+    song_split = re.split(regex, song[0].lower())
     print(Counter(song_split))
-    ## TO-DO need to find a way to trim special character and ignore case so "cool?" = "cool" and "Cool"= "cool"
+
     
 # Question 3: What song uses the word "X" the most time? (X meaning a specific word, choose your own!)
 def question_3():
     mask = ((songs_csv[: ,0] == "Young Buck") & (songs_csv[:, 1] == "Bang Bang"))
     song = songs_csv[mask][:, 3]
-    song_split = song[0].split()
+    song_split = re.split(regex, song[0])
     selected_word = "bang"
     print(song_split.count(selected_word))
 
@@ -63,8 +64,8 @@ def question_5():
     pass
 
 
-question_1()
-#question_2()
+#question_1()
+question_2()
 #question_3()
 
 

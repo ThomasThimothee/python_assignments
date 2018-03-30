@@ -59,7 +59,7 @@ def question_4():
     songs = songs_csv[:, 3]
     songs_without_n = [re.sub(r"\n", "", song) for song in songs]
     songs_split = [re.split(regex, song) for song in songs_without_n]
-    average = sum(len(word)for word in songs_split) / len(songs_split)
+    average = sum(len(song)for song in songs_split) / len(songs_split)
     print(average)
 
 

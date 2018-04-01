@@ -41,7 +41,7 @@ In our example we decided to study the song "Daddy cool" from Boney M. Not a ver
 ### Result: 
 In our example we decided to study the song "Bang bang" from Young Buck. We decided to see how many times the word "bang" is repeated. The result should appear in your terminal/command prompt
 ```
-23 times
+28 times
 ```
 ------
 ### Question 4
@@ -57,6 +57,19 @@ Average number of words: 217.847
 ### Question 5
 ### Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
 
-### Results:
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_5/plot_images/songs_questions_5_new.png)
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_5/plot_images/songs_questions_5.png)
+### Result:
+
+```python
+('1-11', 0) ('101-111', 1947) ('201-211', 2486) ('311-321', 888) ('411-421', 248)
+('11-21', 0) ('111-121', 2326) ('211-221', 2329) ('321-331', 754) ('421-431', 232)
+('21-31', 0) ('121-131', 2569) ('221-231', 2243) ('331-341', 645) ('431-441', 190)
+('31-41', 1) ('131-141', 2767) ('231-241', 2031) ('341-351', 561) ('441-451', 186)
+('41-51', 1) ('141-151', 3055) ('241-251', 1801) ('351-361', 480) ('451-461', 168)
+('51-61', 21) ('151-161', 2902) ('251-261', 1649) ('361-371', 461) ('461-471', 193)
+('61-71', 157) ('161-171', 2953) ('261-271', 1468) ('371-381', 433) ('471-481', 145)
+('71-81', 690) ('171-181', 2820) ('271-281', 1327) ('381-391', 393) ('481-491', 138)
+('81-91', 1279) ('181-191', 2732) ('291-301', 1129) ('391-401', 311) ('491-501', 130)
+('91-101', 1670) ('191-201', 2603) ('301-311', 955) ('401-411', 273)
+```

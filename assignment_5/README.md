@@ -59,4 +59,4 @@ Average number of words: 217.847
 
 ### Results:
 
-![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_5/plot_images/songs_questions_5.png)
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_5/plot_images/songs_questions_5_new.png)

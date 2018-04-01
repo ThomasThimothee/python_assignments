@@ -21,7 +21,6 @@ songs_split = [re.split(regex, song) for song in songs_without_n]
 
 # Question 1: What are the most used words in the songs?
 def question_1():
-    
     # Convert the songs_split list, which is a list of lists, into one list with all the values.
     songs_flatlist = np.asarray([word.lower() for song in songs_split for word in song])
     # Use collections.Counter to count the occurences of each word in the songs, and select the top 20.
@@ -73,7 +72,7 @@ def question_5():
     plt.ylabel("Number of words")
     plt.xlabel("Distributions")
     plt.subplots_adjust(bottom=0.2)
-    plt.savefig("songs_questions_5_new.png", dpi=300)
+    plt.show()
 
     #number_of_songs = len(songs)
     #five_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(6, 11)]
@@ -94,10 +93,10 @@ def word_distributions(count, start, end, increment):
 
 
 #question_1()
-#question_2()
+question_2()
 #question_3()
 #question_4()
-question_5()
+#question_5()
 
 
 

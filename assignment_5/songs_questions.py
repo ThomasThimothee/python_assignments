@@ -73,7 +73,7 @@ def question_5():
     plt.ylabel("Number of words")
     plt.xlabel("Distributions")
     plt.subplots_adjust(bottom=0.2)
-    plt.savefig("songs_questions_5.png", dpi=300)
+    plt.savefig("songs_questions_5_new.png", dpi=300)
 
     #number_of_songs = len(songs)
     #five_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(6, 11)]

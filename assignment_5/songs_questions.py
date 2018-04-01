@@ -5,7 +5,6 @@ import random
 import matplotlib.pyplot as plt
 from collections import Counter
 import re
-import matplotlib.pyplot as plt
 
 
 songs_csv = pd.read_csv(webget.download("https://github.com/KasperOnFire/ImpossibleTechnology/raw/master/Datasets/songdata.csv")).as_matrix()

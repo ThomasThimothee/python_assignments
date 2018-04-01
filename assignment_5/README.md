@@ -41,7 +41,7 @@ In our example we decided to study the song "Daddy cool" from Boney M. Not a ver
 ### Result: 
 In our example we decided to study the song "Bang bang" from Young Buck. We decided to see how many times the word "bang" is repeated. The result should appear in your terminal/command prompt
 ```
-23 times
+28 times
 ```
 ------
 ### Question 4

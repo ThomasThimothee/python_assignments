@@ -31,7 +31,7 @@ python songs_questions.py
 ### Result:
 
 In our example we decided to study the song "Daddy cool" from Boney M. Not a very long and rich song. Below you can find the different words and their occurence in the song. The results are printed in the terminal/command prompt.
-```
+```python
 {'Daddy': 23, 'She': 7, 'Cool': 7, 'crazy': 6, 'about': 6, 'is': 5, 'like': 5, 'a': 5, 'What': 5, 'it': 5, 'fool.': 4, 'cool?': 3, '(yeh)': 2, 'her': 2, 'fool': 1, 'cool': 1, "I'm": 1, 'Cool?': 1, 'Cool.': 1, 'Oh': 1, 'believes': 1, 'in': 1, 'him': 1, 'loves': 1})
 ```
 ------
@@ -58,10 +58,5 @@ Average number of words: 217.847
 ### Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
 
 ### Results:
-If you run the question 5, the result will be displayed in the terminal
-```
-Distribution of songs with 5-10 words :0.02% , 9 songs
-Distribution of songs with 10-20 words :0.14% , 81 songs
-```
 
-
+![alt text](https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_5/plot_images/songs_questions_5.png)

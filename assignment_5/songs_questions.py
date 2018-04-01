@@ -56,26 +56,38 @@ def question_3():
 
 # Question 4: What is the average number of words per song?
 def question_4():
-    average = sum(len(song)for song in songs_split) / len(songs_split)
+    average = sum(len(song) for song in songs_split) / len(songs_split)
     print(average)
 
 
-# Question 5: Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
+# Question 5: Show the distribution of number of words in the songs. 
 def question_5():
-    one_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(1, 11)]
-    eleven_to_twenty = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(11, 21)]
+    words_generator = word_distributions(50, 1, 11, 10)
+    labels, word_counts = zip(*words_generator)
+    
+    plt.bar(range(len(labels)), word_counts)
+    plt.xticks(range(len(labels)), labels, rotation=90)
+    plt.tick_params(axis='x', which='major', labelsize=6)
+    plt.tick_params(axis='y', labelsize=10)
+    plt.title("Word count distributions in songs", fontsize=12)
+    plt.ylabel("Number of words")
+    plt.xlabel("Distributions")
+    plt.subplots_adjust(bottom=0.2)
+    plt.show()
 
-    print(len(eleven_to_twenty))
 
+def word_distributions(count, start, end, increment):
+    for _ in range(count):
+        yield ("{}-{}".format(start, end), len([song for song in songs_split if len(song) in range(start, end)]))
+        start += increment
+        end += increment
+        
 
-
-
-#question_1()
-#question_2()
-#question_3()
-#question_4()
+question_1()
+question_2()
+question_3()
+question_4()
 question_5()
-
 
 
 

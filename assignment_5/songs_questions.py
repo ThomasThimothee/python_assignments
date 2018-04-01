@@ -66,14 +66,14 @@ def question_5():
     labels, word_counts = zip(*words_generator)
     
     plt.bar(range(len(labels)), word_counts)
-    plt.xticks(range(len(labels)), labels, rotation=90)
+    plt.xticks(range(len(labels)), labels, rotation=70)
     plt.tick_params(axis='x', which='major', labelsize=6)
     plt.tick_params(axis='y', labelsize=10)
     plt.title("Word count distributions in songs", fontsize=12)
     plt.ylabel("Number of words")
     plt.xlabel("Distributions")
     plt.subplots_adjust(bottom=0.2)
-    plt.show()
+    plt.savefig("songs_questions_5.png", dpi=300)
 
     #number_of_songs = len(songs)
     #five_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(6, 11)]

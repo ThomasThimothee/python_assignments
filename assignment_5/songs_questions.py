@@ -10,18 +10,18 @@ import matplotlib.pyplot as plt
 
 songs_csv = pd.read_csv(webget.download("https://github.com/KasperOnFire/ImpossibleTechnology/raw/master/Datasets/songdata.csv")).as_matrix()
 # The regular expression used to grab words, even if they have an apostrophe.
-regex = re.compile(r"\b[^A-Za-z']+\b'?")
+regex = re.compile(r"'?\b[^A-Za-z']+\b'?")
+# Grab all the strings with the songs' text and throw them into the variable songs.
+songs = songs_csv[:, 3]
+# Substitute all the newlines (\n) with an empty string.
+songs_without_n = [re.sub(r"\n", "", song) for song in songs]
+# Take each song's text, and split it by using the regular expression defined above.
+songs_split = [re.split(regex, song) for song in songs_without_n]
 
 
 # Question 1: What are the most used words in the songs?
 def question_1():
     
-    # Grab all the strings with the songs' text and throw them into the variable songs.
-    songs = songs_csv[:, 3]
-    # Substitute all the newlines (\n) with an empty space.
-    songs_without_n = [re.sub(r"\n", "", song) for song in songs]
-    # Take each song's text, and split it by using the regular expression defined above.
-    songs_split = [re.split(regex, song) for song in songs_without_n]
     # Convert the songs_split list, which is a list of lists, into one list with all the values.
     songs_flatlist = np.asarray([word.lower() for song in songs_split for word in song])
     # Use collections.Counter to count the occurences of each word in the songs, and select the top 20.
@@ -34,7 +34,7 @@ def question_1():
     plt.title("Top 20 occurences of words", fontsize=12)
     plt.subplots_adjust(bottom=0.2)
     plt.xticks(rotation=70)
-    plt.savefig("songs_questions_1.png")
+    plt.show()
 
 
 #Question 2: How many times are each word repeated in a song?
@@ -56,22 +56,25 @@ def question_3():
 
 # Question 4: What is the average number of words per song?
 def question_4():
-    songs = songs_csv[:, 3]
-    songs_without_n = [re.sub(r"\n", "", song) for song in songs]
-    songs_split = [re.split(regex, song) for song in songs_without_n]
     average = sum(len(song)for song in songs_split) / len(songs_split)
     print(average)
 
 
 # Question 5: Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
 def question_5():
-    pass
+    one_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(1, 11)]
+    eleven_to_twenty = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(11, 21)]
+
+    print(len(eleven_to_twenty))
+
+
 
 
 #question_1()
 #question_2()
 #question_3()
-question_4()
+#question_4()
+question_5()
 
 
 

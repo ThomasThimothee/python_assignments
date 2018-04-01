@@ -58,4 +58,10 @@ Average number of words: 217.847
 ### Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
 
 ### Results:
+If you run the question 5, the result will be displayed in the terminal
+```
+Distribution of songs with 5-10 words :0.02% , 9 songs
+Distribution of songs with 10-20 words :0.14% , 81 songs
+```
+
 

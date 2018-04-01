@@ -62,13 +62,14 @@ def question_4():
 
 # Question 5: Show the distribution of number of words in the songs. (Example: how many songs have 5-10 words, 10-20 words)
 def question_5():
-    one_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(1, 11)]
-    eleven_to_twenty = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(11, 21)]
+    number_of_songs = len(songs)
+    five_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(6, 11)]
+    five_to_ten_distribution = len(five_to_ten) * (100 / number_of_songs)
+    ten_to_twenty = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(11, 21)]
+    ten_to_twenty_distribution = len(ten_to_twenty) * (100 / number_of_songs)
 
-    print(len(eleven_to_twenty))
-
-
-
+    print("Distribution of songs with 5-10 words :%.2f"% five_to_ten_distribution+ "% ,",len(five_to_ten), "songs")
+    print("Distribution of songs with 10-20 words :%.2f"% ten_to_twenty_distribution+ "% ,", len(ten_to_twenty), "songs")
 
 #question_1()
 #question_2()

@@ -60,7 +60,9 @@ def question_4():
 
 # Question 5: Show the distribution of number of words in the songs. 
 def question_5():
+    # Using the word_distributions function, we create a generator object.
     words_generator = word_distributions(50, 1, 11, 10)
+    # We unpack the values from the generator into two variables by iterating through it with the zip function
     labels, word_counts = zip(*words_generator)
     
     plt.bar(range(len(labels)), word_counts)

@@ -49,7 +49,7 @@ def question_2():
 def question_3():
     mask = ((songs_csv[: ,0] == "Young Buck") & (songs_csv[:, 1] == "Bang Bang"))
     song = songs_csv[mask][:, 3]
-    song_split = re.split(regex, song[0])
+    song_split = re.split(regex, song[0].lower())
     selected_word = "bang"
     print(song_split.count(selected_word))
 
@@ -94,10 +94,10 @@ def word_distributions(count, start, end, increment):
 
 
 #question_1()
-#question_2()
-#question_3()
+question_2()
+question_3()
 #question_4()
-question_5()
+#question_5()
 
 
 

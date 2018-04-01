@@ -75,6 +75,15 @@ def question_5():
     plt.subplots_adjust(bottom=0.2)
     plt.show()
 
+    #number_of_songs = len(songs)
+    #five_to_ten = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(6, 11)]
+    #five_to_ten_distribution = len(five_to_ten) * (100 / number_of_songs)
+    #ten_to_twenty = [np.unique(song) for song in songs_split if len(np.unique(song)) in range(11, 21)]
+    #ten_to_twenty_distribution = len(ten_to_twenty) * (100 / number_of_songs)
+
+    #print("Distribution of songs with 5-10 words :%.2f"% five_to_ten_distribution+ "% ,",len(five_to_ten), "songs")
+    #print("Distribution of songs with 10-20 words :%.2f"% ten_to_twenty_distribution+ "% ,", len(ten_to_twenty), "songs")
+
 
 def word_distributions(count, start, end, increment):
     for _ in range(count):
@@ -83,10 +92,11 @@ def word_distributions(count, start, end, increment):
         end += increment
         
 
-question_1()
-question_2()
-question_3()
-question_4()
+
+#question_1()
+#question_2()
+#question_3()
+#question_4()
 question_5()
 
 

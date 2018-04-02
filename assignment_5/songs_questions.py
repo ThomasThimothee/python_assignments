@@ -70,10 +70,10 @@ def question_5():
     plt.tick_params(axis='x', which='major', labelsize=6)
     plt.tick_params(axis='y', labelsize=10)
     plt.title("Word count distributions in songs", fontsize=12)
-    plt.ylabel("Number of words")
+    plt.ylabel("Number of songs")
     plt.xlabel("Distributions")
     plt.subplots_adjust(bottom=0.2)
-    plt.show()
+    plt.savefig("songs_questions_5.png", dpi=300)
 
 
 def word_distributions(count, start, end, increment):
@@ -85,10 +85,10 @@ def word_distributions(count, start, end, increment):
         end += increment
         
 
-question_1()
-question_2()
-question_3()
-question_4()
+#question_1()
+#question_2()
+#question_3()
+#question_4()
 question_5()
 
 

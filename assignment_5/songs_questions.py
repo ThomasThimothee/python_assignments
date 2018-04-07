@@ -73,7 +73,7 @@ def question_5():
     plt.ylabel("Number of songs")
     plt.xlabel("Distributions")
     plt.subplots_adjust(bottom=0.2)
-    plt.savefig("songs_questions_5.png", dpi=300)
+    plt.show()
 
 
 def word_distributions(count, start, end, increment):
@@ -85,11 +85,11 @@ def word_distributions(count, start, end, increment):
         end += increment
         
 
-#question_1()
+question_1()
 question_2()
-#question_3()
-#question_4()
-#question_5()
+question_3()
+question_4()
+question_5()
 
 
 

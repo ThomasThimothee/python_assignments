@@ -22,7 +22,7 @@ def question_1():
     print(crypto_csv.loc[index])
 
 
-#Question 2: 
+#Question 2: What is the average number of transactions per hour (would look nice like a graph)
 def question_2():
     pass
     

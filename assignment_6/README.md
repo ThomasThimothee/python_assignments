@@ -20,11 +20,6 @@ python crypto_questions.py
 
 ### Result:
 
-```python
-BUY     5075
-SELL    4925
-```
-
 ------
 ### Question 2
 ### What is the average number of transactions per hour?
@@ -38,14 +33,30 @@ SELL    4925
 
 ### Result: 
 
+```python
+taker_side    value_counts
+BUY           5075
+SELL          4925
+```
+
 ------
 ### Question 4
 ### What is the average sale and buy price per day for the most bought currency
 
 ### Result: 
 
+```python
+taker_side    mean 
+BUY           6829.438124
+SELL          6838.640686
+```
+
 ------
 ### Question 5
 ### What is the total volume per day?
 
 ### Result:
+
+```python
+avg_volume = 2909.733673561979
+```

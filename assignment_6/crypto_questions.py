@@ -33,14 +33,14 @@ def question_4():
 
 # Question 5: 
 def question_5():
-    pass
+    print(crypto_csv["size"].sum())
         
 
 #question_1()
 #question_2()
 #question_3()
-question_4()
-#question_5()
+#question_4()
+question_5()
 
 
 

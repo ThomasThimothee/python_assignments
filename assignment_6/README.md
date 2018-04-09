@@ -20,7 +20,7 @@ python crypto_questions.py
 
 ### Result:
 
-```python
+```
 symbol_id                       BITSTAMP_SPOT_BTC_USD
 time_exchange                     2018-04-07 01:09:36
 time_coinapi             2018-04-07T01:09:36.4331012Z

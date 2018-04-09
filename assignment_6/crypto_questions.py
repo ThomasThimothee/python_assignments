@@ -11,9 +11,15 @@ import csv
 crypto_csv = pd.read_table(webget.download("https://raw.githubusercontent.com/PeterL93/PythonProject/master/trades_march_to_april_2018.csv"), sep=";")
 
 
-# Question 1: 
+# Question 1: What is the transaction with the highest volume in the timespan
 def question_1():
-    pass
+    #argmax was depreciated, Return index of first occurrence of maximum over requested axis.
+    index = crypto_csv["size"].idxmax() 
+
+    #.ix[] supports mixed integer and label based access. 
+    # However, when an axis is integer based, ONLY label based access and not positional access is supported. 
+    # Thus, in such cases, it’s usually better to be explicit and use .iloc or .loc..loc[]
+    print(crypto_csv.loc[index])
 
 
 #Question 2: 
@@ -36,10 +42,10 @@ def question_5():
     pass
         
 
-#question_1()
+question_1()
 #question_2()
 #question_3()
-question_4()
+#question_4()
 #question_5()
 
 

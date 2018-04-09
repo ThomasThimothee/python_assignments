@@ -26,7 +26,7 @@ def question_1():
 
 #Question 2: What is the average number of transactions per hour (would look nice like a graph)
 def question_2():
-    print(crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour]))
+    print(crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour]).size())
 
 
 # Question 3: 
@@ -41,15 +41,11 @@ def question_4():
 
 # Question 5: 
 def question_5():
-    pass
+    print(crypto_csv["size"].sum())
         
 
-#question_1()
+question_1()
 question_2()
-#question_3()
-#question_4()
-#question_5()
-
-
-
-
+question_3()
+question_4()
+question_5()

@@ -6,9 +6,11 @@ import matplotlib.pyplot as plt
 from collections import Counter
 import json
 import csv
+import datetime
 
 
 crypto_csv = pd.read_table(webget.download("https://raw.githubusercontent.com/PeterL93/PythonProject/master/trades_march_to_april_2018.csv"), sep=";")
+crypto_csv["time_exchange"] = crypto_csv["time_exchange"].apply(lambda x: datetime.datetime.strptime(x, "%Y-%m-%dT%H:%M:%S.%f0Z"))
 
 
 # Question 1: What is the transaction with the highest volume in the timespan
@@ -24,9 +26,10 @@ def question_1():
 
 #Question 2: What is the average number of transactions per hour (would look nice like a graph)
 def question_2():
-    #new_table = crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour])
-    print(type(crypto_csv.iloc[1,1]))
-    
+    grouped_df = crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour]).size()
+    for key, item in grouped_df:
+        print(grouped_df.get_group(key), "\n\n")
+
 
 # Question 3: 
 def question_3():

@@ -63,7 +63,7 @@ SELL          4925
 
 ------
 ### Question 4
-### What is the average sale and buy price per day for the most bought currency
+### What is the average sale and buy price per day for the most bought currency?
 
 ### Result: 
 

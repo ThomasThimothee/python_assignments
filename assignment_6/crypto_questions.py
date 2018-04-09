@@ -7,7 +7,6 @@ from collections import Counter
 import json
 import csv
 import datetime
-import iso8601
 
 
 crypto_csv = pd.read_table(webget.download("https://raw.githubusercontent.com/PeterL93/PythonProject/master/trades_march_to_april_2018.csv"), sep=";")
@@ -27,7 +26,7 @@ def question_1():
 
 #Question 2: What is the average number of transactions per hour (would look nice like a graph)
 def question_2():
-    pass
+    print(crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour]))
 
 
 # Question 3: 
@@ -46,7 +45,7 @@ def question_5():
         
 
 #question_1()
-#question_2()
+question_2()
 #question_3()
 #question_4()
 #question_5()

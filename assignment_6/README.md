@@ -1,9 +1,11 @@
 # Success Impossible  - Coinbase Data
 ### Dependencies required
 ```python
+import webget
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import requests
+import datetime
 ```
 The webget module is provided in the repository.
 

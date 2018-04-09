@@ -22,25 +22,41 @@ python crypto_questions.py
 
 ------
 ### Question 2
-### What is the average transaction number per day, for each day (would look nice like a graph)?
+### What is the average number of transactions per hour?
 
 ### Result:
 
 
 ------
 ### Question 3
-### What is the most favoured transaction type (selling dollars for euros, for example)?
+### What is the most favourite; selling or buying?
 
 ### Result: 
+
+```python
+taker_side    value_counts
+BUY           5075
+SELL          4925
+```
 
 ------
 ### Question 4
-### What is the average sale and buy price per day for the most bought currency?
+### What is the average sale and buy price per day for the most bought currency
 
 ### Result: 
 
+```python
+taker_side    mean 
+BUY           6829.438124
+SELL          6838.640686
+```
+
 ------
 ### Question 5
-### What is the total volume per day (graph)?
+### What is the total volume per day?
 
 ### Result:
+
+```python
+avg_volume = 2909.733673561979
+```

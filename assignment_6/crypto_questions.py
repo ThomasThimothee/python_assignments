@@ -21,24 +21,33 @@ def question_1():
     #.ix[] supports mixed integer and label based access. 
     # However, when an axis is integer based, ONLY label based access and not positional access is supported. 
     # Thus, in such cases, it’s usually better to be explicit and use .iloc or .loc..loc[]
+    print("---------------------")
+    print("Question 1: ")
     print(crypto_csv.loc[index])
+    print("---------------------")
 
 
 #Question 2: What is the average number of transactions per hour (would look nice like a graph)
 def question_2():
-    grouped_df = crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour]).size()
-    for key, item in grouped_df:
-        print(grouped_df.get_group(key), "\n\n")
-
+    print("---------------------")
+    print("Question 2: ")
+    print(crypto_csv.groupby([crypto_csv['time_exchange'].dt.hour]))
+    print("---------------------")
 
 # Question 3: 
 def question_3():
+    print("---------------------")
+    print("Question 3: ")
     print(crypto_csv["taker_side"].value_counts())
+    print("---------------------")
 
 
 # Question 4: 
 def question_4():
+    print("---------------------")
+    print("Question 4: ")
     print(crypto_csv.groupby("taker_side")["price"].mean())
+    print("---------------------")
 
 
 # Question 5: 
@@ -46,11 +55,11 @@ def question_5():
     pass
         
 
-#question_1()
+question_1()
 question_2()
-#question_3()
-#question_4()
-#question_5()
+question_3()
+question_4()
+question_5()
 
 
 

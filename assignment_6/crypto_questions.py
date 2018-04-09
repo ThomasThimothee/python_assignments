@@ -28,7 +28,7 @@ def question_3():
 
 # Question 4: 
 def question_4():
-    pass
+    print(crypto_csv.groupby("taker_side")["price"].mean())
 
 
 # Question 5: 
@@ -38,8 +38,8 @@ def question_5():
 
 #question_1()
 #question_2()
-question_3()
-#question_4()
+#question_3()
+question_4()
 #question_5()
 
 

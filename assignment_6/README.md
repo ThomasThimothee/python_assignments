@@ -39,7 +39,7 @@ taker_side                                       SELL
 ### Result:
 
 ```python
-Hour    Transaction count
+hour    transaction_count
 0       414
 1       2847
 2       1001
@@ -70,7 +70,7 @@ SELL          4925
 ### Result: 
 
 ```python
-taker_side    mean 
+taker_side    mean_price 
 BUY           6829.438124
 SELL          6838.640686
 ```

@@ -82,5 +82,5 @@ SELL          6838.640686
 ### Result:
 
 ```python
-avg_volume = 2909.733673561979
+total_volume = 2909.733673561979
 ```

@@ -40,8 +40,6 @@ python kickstarter_questions.py
 
 ------
 ### Question 5
-### For the main-category with the most successfully funded projects (quantity, not rate of success), 
-###     what is the range of goal-amount (usd_goal_real) a 10k usd range, e.g. range 0-10k$ , 5-15k$, 
-###     100k$-110k$, that contains the most successfully funded projects (in quantity, not rate of success)?
+### For the main-category with the most successfully funded projects (quantity, not rate of success), what is the range of goal-amount (usd_goal_real) a 10k usd range, e.g. range 0-10k$ , 5-15k$, 100k$-110k$, that contains the most successfully funded projects (in quantity, not rate of success)?
 
 ### Result:

@@ -22,8 +22,7 @@ python kickstarter_questions.py
 
 ------
 ### Question 2
-### For the main-category of project with highest success rate (question above), 
-what is the category with the highest number of project proposals?
+### For the main-category of project with highest success rate (question above), what is the category with the highest number of project proposals?
 
 ### Result:
 

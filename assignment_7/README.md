@@ -1,4 +1,4 @@
-# Success Impossible  - Coinbase Data
+# Black Girl  - Kickstarter Data
 ### Dependencies required
 ```python
 import pandas as pd
@@ -8,77 +8,41 @@ import matplotlib.pyplot as plt
 The webget module is provided in the repository.
 
 ### How to run
-Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_6/), and then run the command below
+Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_7/), and then run the command below
 
 ```
-python crypto_questions.py
+python kickstarter_questions.py
 ```
 
 ## Results
 ### Question 1
-### What is the transaction with the highest volume in the timespan?
+### What main-category of project has the highest success rate?
 
 ### Result:
-
-```
-symbol_id                       BITSTAMP_SPOT_BTC_USD
-time_exchange                     2018-04-07 01:09:36
-time_coinapi             2018-04-07T01:09:36.4331012Z
-uuid             7f612da4-0aa6-4508-b850-19d5d57dea54
-price                                            6800
-size                                          29.3765
-taker_side                                       SELL
-```
 
 ------
 ### Question 2
-### What is the average number of transactions per hour?
+### For the main-category of project with highest success rate (question above), 
+###     what is the category with the highest number of project proposals?
 
 ### Result:
-
-```python
-Hour    Transaction count
-0       414
-1       2847
-2       1001
-3       659
-4       628
-5       1082
-6       1991
-7       956
-8       422
-```
 
 ------
 ### Question 3
-### What is the most favourite; selling or buying?
+### What is the median pledged amount (usd_pledged_real) of successfully funded projects?
 
 ### Result: 
-
-```python
-taker_side    value_counts
-BUY           5075
-SELL          4925
-```
 
 ------
 ### Question 4
-### What is the average sale and buy price per day for the most bought currency
+### What is the number of successfully funded projects with more than 5.000$ pledged (usd_pledged_real) per category?
 
 ### Result: 
 
-```python
-taker_side    mean 
-BUY           6829.438124
-SELL          6838.640686
-```
-
 ------
 ### Question 5
-### What is the total volume per day?
+### For the main-category with the most successfully funded projects (quantity, not rate of success), 
+##      what is the range of goal-amount (usd_goal_real) a 10k usd range, e.g. range 0-10k$ , 5-15k$, 
+##      100k$-110k$, that contains the most successfully funded projects (in quantity, not rate of success)?
 
 ### Result:
-
-```python
-avg_volume = 2909.733673561979
-```

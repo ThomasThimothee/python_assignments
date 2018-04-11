@@ -2,10 +2,6 @@ import webget
 import pandas as pd
 import numpy as np
 import requests
-import matplotlib.pyplot as plt
-from collections import Counter
-import json
-import csv
 import datetime
 
 

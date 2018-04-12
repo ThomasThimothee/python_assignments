@@ -31,8 +31,9 @@ def question_2():
 
 # Question 3: What is the median pledged amount (usd_pledged_real) of successfully funded projects?
 def question_3():
-    pass
-
+    mask = kickstarter_csv.state == "successful"
+    df_by_usd_pledged = kickstarter_csv[mask].groupby(['usd_pledged_real', 'state']).median()
+    print(df_by_usd_pledged)
 # Question 4: What is the number of successfully funded projects with more than 5.000$ pledged (usd_pledged_real) per category?
 def question_4():
     pass

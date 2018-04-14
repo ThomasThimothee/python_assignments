@@ -13,8 +13,6 @@ def question_1():
     success_rates = kickstarter_csv[mask]["main_category"].value_counts().plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    plt.title("", fontsize=12, y=1.08)
-    plt.ylabel("")
     plt.show()
 
 
@@ -22,7 +20,9 @@ def question_1():
 #            what is the category with the highest number of project proposals?
 def question_2():
     mask = kickstarter_csv.main_category == "Music"
-    highest_number_of_project_proposals = kickstarter_csv[mask].groupby("main_category")["category"].value_counts().plot.bar()
+    highest_number_of_project_proposals = kickstarter_csv[mask]["category"].value_counts().plot.bar()
+
+    plt.subplots_adjust(bottom=0.3, left=0.15)
     plt.show()
 
 
@@ -32,10 +32,6 @@ def question_3():
     median_pledged = kickstarter_csv[mask].groupby("state")["usd_pledged_real"].median()
     print(median_pledged)
 
-    #mask = kickstarter_csv.state == "successful"
-    #df_by_usd_pledged = kickstarter_csv[mask].groupby(['usd_pledged_real', 'state']).median()
-    #print(df_by_usd_pledged)
-
 
 # Question 4: What is the number of successfully funded projects with more than 5.000$ pledged (usd_pledged_real) per category?
 def question_4():
@@ -43,8 +39,6 @@ def question_4():
     kickstarter_csv[mask]["category"].value_counts().head(10).plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    plt.title("", fontsize=12, y=1.08)
-    plt.ylabel("")
     plt.show()
 
 

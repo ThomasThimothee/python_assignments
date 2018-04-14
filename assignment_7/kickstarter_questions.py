@@ -21,8 +21,8 @@ def question_1():
 #Question 2: For the main-category of project with highest success rate (question above), 
 #            what is the category with the highest number of project proposals?
 def question_2():
-    mask = kickstarter_csv.state == "successful"
-    highest_number_of_project_proposals = kickstarter_csv[mask].groupby("category")["state"].value_counts().plot.bar()
+    mask = kickstarter_csv.main_category == "Music"
+    highest_number_of_project_proposals = kickstarter_csv[mask].groupby("main_category")["category"].value_counts().plot.bar()
     plt.show()
 
 
@@ -55,10 +55,10 @@ def question_5():
     pass
         
 
-question_1()
-#question_2()
-question_3()
-question_4()
-question_5()
+#question_1()
+question_2()
+#question_3()
+#question_4()
+#question_5()
 
 

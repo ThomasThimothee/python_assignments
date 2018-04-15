@@ -19,25 +19,47 @@ python kickstarter_questions.py
 ### What main-category of project has the highest success rate?
 
 ### Result:
+```
+The highest sucess rate out of all main-category projects is Music
 
+```
 ------
 ### Question 2
 ### For the main-category of project with highest success rate (question above), what is the category with the highest number of project proposals?
 
 ### Result:
 
+```
+The category with the highest number of project proposals is Music
+
+```
 ------
 ### Question 3
 ### What is the median pledged amount (usd_pledged_real) of successfully funded projects?
 
 ### Result: 
+```
+The median pledged amount of sucessfully funded projects is 5107.25 usd
 
+```
 ------
 ### Question 4
 ### What is the number of successfully funded projects with more than 5.000$ pledged (usd_pledged_real) per category?
 
 ### Result: 
+```
+Product Design: 6400
+Tabletop Games: 5800
+Documentary: 4200
+Music: 3000
+Sports: 2400
+Food: 2100
+Video Games: 1500
+Film & Video: 1400
+Country & Folk: 1300
+Theater: 1300
 
+```
 ------
 ### Question 5
 ### For the main-category with the most successfully funded projects (quantity, not rate of success), what is the goal-amount range (usd_goal_real), e.g. range 0-10k$ , 5-15k$, 100k$-110k$, that contains the most successfully funded projects (in quantity, not rate of success)?

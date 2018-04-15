@@ -13,8 +13,7 @@ def question_1():
     success_rates = kickstarter_csv[mask]["main_category"].value_counts().plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    #plt.show()
-    plt.savefig('graph1.png')
+    plt.show()
 
 
 #Question 2: For the main-category of project with highest success rate (question above), 
@@ -24,8 +23,7 @@ def question_2():
     highest_number_of_project_proposals = kickstarter_csv[mask]["category"].value_counts().plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    #plt.show()
-    plt.savefig('graph2.png')
+    plt.show()
 
 
 # Question 3: What is the median pledged amount (usd_pledged_real) of successfully funded projects?
@@ -41,8 +39,7 @@ def question_4():
     kickstarter_csv[mask]["category"].value_counts().head(10).plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    #plt.show()
-    plt.savefig('graph3.png')
+    plt.show()
 
 
 # Question 5: For the main-category with the most successfully funded projects (quantity, not rate of success), 
@@ -51,13 +48,13 @@ def question_4():
 def question_5():
     mask = kickstarter_csv.state == "successful"
     nb_success_per_main_cat = kickstarter_csv[mask]["main_category"].value_counts()
-    #print(nb_success_per_main_cat.head(1))
     main_category_highest_nb_success = "Music"
     mask = (kickstarter_csv.state == "successful") & (kickstarter_csv.main_category == "Music")
     minimum = 0
     maximum = kickstarter_csv[mask]["usd_goal_real"].idxmax()
     ranges = [i for i in range(0, maximum, 1000)]
     results = []
+
     for i in ranges:
         start_range = i
         end_range = i + 10000
@@ -70,12 +67,8 @@ def question_5():
     print(top_3)
 
 
-
-
 question_1()
 question_2()
 question_3()
 question_4()
 question_5()
-
-

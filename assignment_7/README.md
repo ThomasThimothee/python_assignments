@@ -18,8 +18,7 @@ python kickstarter_questions.py
 ### Question 1
 ### What main-category of project has the highest success rate?
 
-![alt text]
-(https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_7/plotimages/graph1.png)
+![Screenshot](graph1.png)
 
 ### Result:
 ```
@@ -30,8 +29,7 @@ The highest sucess rate out of all main-category projects is Music
 ### Question 2
 ### For the main-category of project with highest success rate (question above), what is the category with the highest number of project proposals?
 
-![alt text]
-(https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_7/plotimages/graph2.png)
+![Screenshot](graph2.png)
 
 ### Result:
 
@@ -52,8 +50,7 @@ The median pledged amount of sucessfully funded projects is 5107.25 usd
 ### Question 4
 ### What is the number of successfully funded projects with more than 5.000$ pledged (usd_pledged_real) per category?
 
-![alt text]
-(https://github.com/ThomasThimothee/python_assignments/blob/master/assignment_7/plotimages/graph3.png)
+![Screenshot](graph3.png)
 
 ### Result: 
 ```

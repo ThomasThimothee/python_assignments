@@ -46,13 +46,33 @@ def question_4():
 #             what is the range of goal-amount (usd_goal_real) a 10k usd range, e.g. range 0-10k$ , 5-15k$, 
 #             100k$-110k$, that contains the most successfully funded projects (in quantity, not rate of success)?
 def question_5():
-    pass
-        
+    mask = kickstarter_csv.state == "successful"
+    nb_success_per_main_cat = kickstarter_csv[mask]["main_category"].value_counts()
+    #print(nb_success_per_main_cat.head(1))
+    main_category_highest_nb_success = "Music"
+    mask = (kickstarter_csv.state == "successful") & (kickstarter_csv.main_category == "Music")
+    minimum = 0
+    maximum = kickstarter_csv[mask]["usd_goal_real"].idxmax()
+    ranges = [i for i in range(0, maximum, 1000)]
+    results = []
+    for i in ranges:
+        start_range = i
+        end_range = i + 10000
+        mask = (kickstarter_csv.state == "successful") & (kickstarter_csv.main_category == "Music") & (kickstarter_csv.usd_goal_real >= start_range) &  (kickstarter_csv.usd_goal_real <= end_range)
+        res = kickstarter_csv[mask].shape[0]
+        results.append(tuple(["range between {} and {}".format(start_range, end_range), res]))
+    
+    sorted_results = sorted(results, key=lambda tup: tup[1], reverse = True)
+    top_3 = sorted_results[0:3]
+    print(top_3)
+
+
+
 
 #question_1()
-question_2()
+#question_2()
 #question_3()
 #question_4()
-#question_5()
+question_5()
 
 

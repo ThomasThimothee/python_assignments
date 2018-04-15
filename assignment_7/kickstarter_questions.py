@@ -13,8 +13,8 @@ def question_1():
     success_rates = kickstarter_csv[mask]["main_category"].value_counts().plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    plt.show()
-    #plt.savefig('graph1.png')
+    #plt.show()
+    plt.savefig('graph1.png')
 
 
 #Question 2: For the main-category of project with highest success rate (question above), 
@@ -24,8 +24,8 @@ def question_2():
     highest_number_of_project_proposals = kickstarter_csv[mask]["category"].value_counts().plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    plt.show()
-    #plt.savefig('graph2.png')
+    #plt.show()
+    plt.savefig('graph2.png')
 
 
 # Question 3: What is the median pledged amount (usd_pledged_real) of successfully funded projects?
@@ -41,8 +41,8 @@ def question_4():
     kickstarter_csv[mask]["category"].value_counts().head(10).plot.bar()
 
     plt.subplots_adjust(bottom=0.3, left=0.15)
-    plt.show()
-    #plt.savefig('graph3.png')
+    #plt.show()
+    plt.savefig('graph3.png')
 
 
 # Question 5: For the main-category with the most successfully funded projects (quantity, not rate of success), 

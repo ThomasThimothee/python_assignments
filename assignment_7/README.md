@@ -43,3 +43,11 @@ python kickstarter_questions.py
 ### For the main-category with the most successfully funded projects (quantity, not rate of success), what is the goal-amount range (usd_goal_real), e.g. range 0-10k$ , 5-15k$, 100k$-110k$, that contains the most successfully funded projects (in quantity, not rate of success)?
 
 ### Result:
+```
+We found that the category with the most successfully funded projects is the main_category Music. 
+for the ranges with most funded projects find below our top 3:
+range between 0 and 10000', 21147 projects
+range between 1000 and 11000', 17876 projects
+range between 2000 and 12000', 14456 projects
+
+```

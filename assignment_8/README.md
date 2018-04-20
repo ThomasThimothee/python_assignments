@@ -16,29 +16,28 @@ python airline_questions.py
 
 ## Results
 ### Question 1
-### How many incidents happened between 1985-1999?
+### How many tweets did Trump make weekly during the years 2016-2017?
 
 
 ### Result:
 
 ------
 ### Question 2
-### How many death-incidents happened between 1985-1999?
+### How many tweets did Obama make weekly during the years 2016-2017?
 ### Result:
 
 ------
 ### Question 3
-### How many incidents happened between 2000-2014?
+### How many times have the two presidents, ever tweeted their slogans? (make america great again, yes we can) Find the amount for each president, respectively
 
 
 ### Result: 
 ------
 ### Question 4
-### How many death-incidents happened between 2000-2014?
+### Which president mentions "Iran" the most?
 
 ### Result: 
 ------
 ### Question 5
-### Has the amount of incidents increased, comparing the later statistics to the earlier ones?
-
+### How many times do both presidents mention "obamacare", respectively?
 ### Result:

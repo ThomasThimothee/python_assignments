@@ -4,7 +4,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as 
-import re
+import re   
 ```
 The webget module is provided in the repository.
 
@@ -12,7 +12,7 @@ The webget module is provided in the repository.
 Simply clone the repository, navigate into the correct folder (/python_assignments/assignment_8/), and then run the command below
 
 ```
-python airline_questions.py
+python tweet_questions.py
 ```
 
 ## Results

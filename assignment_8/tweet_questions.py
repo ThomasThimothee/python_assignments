@@ -21,12 +21,24 @@ def question_1():
 
 #Question_2: How many tweets did Obama make weekly during the years 2016-2017?
 def question_2():
-    #obama_csv["created_at"] = pd.to_datetime(obama_csv["created_at"])
-    #obama_csv.groupby([obama_csv["created_at"].dt.year, obama_csv["created_at"].dt.week]).size().plot.bar()
-    #plt.show()
+    obama_csv["created_at"] = pd.to_datetime(obama_csv["created_at"])
+    weekly_tweets_by_year = obama_csv.groupby([obama_csv[obama_csv.created_at > "2016-01-01"]["created_at"].dt.year, obama_csv["created_at"].dt.week]).size()
+    
+    plot = weekly_tweets_by_year.plot.bar()
 
-    obama_csv['created_at'] = pd.to_datetime(trump_csv['created_at'], format='%m/%d/%y %H:%M')
-    print(obama_csv.reset_index().set_index('created_at').resample('W').count()['index'])    
+    for label in plot.xaxis.get_ticklabels()[::]:
+        label.set_visible(False)
+    for label in plot.xaxis.get_ticklabels()[::4]:
+        label.set_visible(True)
+    
+    plt.ylabel("Number of tweets")
+    plt.xlabel("Year, week")
+    plt.subplots_adjust(bottom=0.3)
+    plt.xticks(rotation=90)
+    plt.show()
+
+    #obama_csv['created_at'] = pd.to_datetime(trump_csv['created_at'], format='%m/%d/%y %H:%M')
+    #print(obama_csv.reset_index().set_index('created_at').resample('W').count()['index'])    
 
 
 #Question_3: How many times have the two presidents, ever tweeted their slogans? (make america great again, yes we can) Find the amount for each president, respectively

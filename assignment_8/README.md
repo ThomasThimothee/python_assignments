@@ -31,7 +31,7 @@ python tweet_questions.py
 
 ### Result:
 
-![Screenshot](plot_images/question_2.png)
+![Screenshot](plot_images/question_2_new.png)
 
 ------
 ### Question 3

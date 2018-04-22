@@ -23,10 +23,15 @@ python tweet_questions.py
 
 ### Result:
 
+![Screenshot](plot_images/question_1.png)
+
 ------
 ### Question 2
 ### How many tweets did Obama make weekly during the years 2016-2017?
+
 ### Result:
+
+![Screenshot](plot_images/question_2.png)
 
 ------
 ### Question 3

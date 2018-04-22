@@ -27,7 +27,7 @@ def question_1():
     plt.xlabel("Year, week")
     plt.subplots_adjust(bottom=0.3)
     plt.xticks(rotation=90)
-    plt.savefig("question_1.png", dpi=300)
+    plt.show()
 
 
 #Question_2: How many tweets did Obama make weekly during the years 2016-2017?
@@ -47,7 +47,7 @@ def question_2():
     plt.xlabel("Year, week")
     plt.subplots_adjust(bottom=0.3)
     plt.xticks(rotation=90)
-    plt.savefig("question_2.png", dpi=300)
+    plt.show()
     
 
 #Question_3: How many times have the two presidents, ever tweeted their slogans? (make america great again, yes we can) Find the amount for each president, respectively
